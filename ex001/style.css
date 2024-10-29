@@ -1,0 +1,14 @@
+:root{
+    font-family: "Poppins", sans-serif;
+}
+
+
+table{
+    border-collapse: collapse;
+    margin: 12px;
+    
+}
+table td{
+    border: 1px solid black;
+    padding: 8px;
+}
