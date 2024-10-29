@@ -20,6 +20,7 @@ body{
 header{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 14px;
 }
 
 #left-side>h1>a{
@@ -51,4 +52,30 @@ header{
 
 #right-side a:hover{
     text-decoration: underline;
+}
+
+/*----------------------BODY--------------------*/
+
+main{
+    width: 80%;
+    padding: 24px;
+    margin: 48px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.36);
+    border-radius: 14px;
+}
+
+ul{
+    list-style: none;
+}
+
+li>a{
+    color: rgb(137	92	52);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+li>a:hover{
+    text-decoration: underline;
+    color: black;
 }
