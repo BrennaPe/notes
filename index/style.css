@@ -27,6 +27,7 @@ header{
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.532);
     padding: 12px;
+    padding-left: 44px;
     width: 50vw;
 }
 
@@ -48,6 +49,10 @@ header{
     color: rgba(255, 255, 255, 0.532);
 }
 
+#right-side a:hover{
+    text-decoration: underline;
+}
+
 /*----------------------MAIN--------------------*/
 
 main{
@@ -58,11 +63,10 @@ main{
 }
 
 button{
-    background-color: rgba(255, 255, 255, 0.806);
+    background-color: rgba(255, 255, 255, 0.652);
     border-radius: 12px;
     border: 0px;
     height: 80px;
-
 }
 
 button>a{
@@ -74,15 +78,27 @@ button>a{
     padding: 24px;
 }
 
+button:hover{
+    background-color: white;
+    /* background-color: rgba(238, 189, 83, 0.436); */
+    color: white;
+}
+
 /*---------------------FOOTER--------------------*/
 
 footer{
     text-align: center;
-    color: rgba(255, 255, 255, 0.532);
+    font-size: .8rem;
+    color: rgba(255, 255, 255, 0.73);
 }
 
 footer>a{
     /* color: rgb(148	122	43); */
-    color: rgb(96	73	24);
     text-decoration: none;
+    color: rgba(255, 255, 255, 0.73);
+    font-weight: 700;
+}
+
+footer>a:hover{
+    text-decoration: underline;
 }
