@@ -73,16 +73,3 @@ header{
 }
 
 /*----------------------BODY--------------------*/
-
-main{
-    width: 80%;
-    padding: 24px;
-    margin: 48px;
-    margin: auto;
-    background-color: rgba(255, 255, 255, 0.36);
-    border-radius: 14px;
-}
-
-p{
-    text-align: justify;
-}

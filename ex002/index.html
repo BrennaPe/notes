@@ -3,15 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Parágrafos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="container1"></div>
-    <div id="container2"></div>
-    <div id="container3"></div>
-    <div id="container4"></div>
-    <div id="container5"><p>teste</p></div>
-    <div id="container6">teste.2</div>
+    <header>
+        <div id="left-side">
+            <h1><a href="../index/index.html">Note Making</a></h1>
+        </div>
+    <div id="right-side">
+        <ul>
+            <li><a href="https://www.cursoemvideo.com/login/" target="_blank">Guanabara</a></li>
+            <li><a href="https://app.rocketseat.com.br/?type=ALL" target="_blank">Rocketseat</a></li>
+        </ul>
+    </div>
+    </header>
+
+    <main>
+        <h1>Parágrafos, Quebras de Linha e Emojis</h1>
+        
+        <h2>Parágrafos e Quebras de Linha</h2>
+        <p>Parágrafos são elementos de nível de bloco. O elemento HTML &lt;p&gt representa um parágrafo. Em mídias visuais, parágrafos geralmente são representados como blocos de texto separados por linhas em branco e/ou por recuo/parágrafo na primeira linha. No entanto, em HTML, parágrafos podem agrupar qualquer conteúdo relacionado, como imagens ou campos de formulários.</p>
+        <p>Usar elementos &lt;p&gt vazios para adicionar espaço entre parágrafos é problemático para pessoas que navegam com leitores de tela. Os leitores de tela podem anunciar a presença do parágrafo, mas não seu conteúdo — pois não há nada nele. Não importa se você quebra o texto apertando "Enter" no VSCode; no navegador, o texto sempre aparecerá em sequência. Para quebrar um parágrafo, é necessário usar a tag correta. Para isso, utiliza-se a tag &lt;br&gt (Break Row, ou quebra de linha). Se você desejar um espaço extra, use propriedades CSS, como `margin`, para criar esse efeito</p>
+         <!-- Caracteres especiais mais utilizados no HTML https://www.homehost.com.br/blog/tutoriais/caracteres-especiais-acentos-html/ -->
+
+        <h2>Emoji</h2>
+        <p>Para adicionar emojis nós podemos consultar a <a href="https://emojipedia.org">Enciclopédia de emoji</a>, lá encontraremos as informações técnicas do código html. Além da das informações técnicas é necessário lembrar que antes do código precisa digitar &amp;#x <br> vamos adicionar alguns emojis: <br> &#x1F970 <br> &#x1F618 <br>&#x1F617 <br> &#x1F3B5 </p>
+        <h3>Caracteres especiais </h3>
+        <p>&copy; <br>&reg; <br>&amp; <br>&euro;</p>
+        <p> Um exemplo de caractere que precisei utilizar no primeiro parágrafo desta webpage é o lt=less than and gt= Greater than, Para colocar esse símboplos especiais foi necessário colocar , caso contrário vc estaria fazendo a tag e ela não apareceria em seu browser. </p>
+        <a href="https://www.homehost.com.br/blog/tutoriais/caracteres-especiais-acentos-html/" target="_blank">Caracteres especiais mais utilizados no HTML</a>
+    </main>
+    
 </body>
 </html>
