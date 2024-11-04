@@ -1,0 +1,81 @@
+div{
+    background-color: black;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+}
+
+p{
+    line-height: 40px;
+}
+
+.box1{
+    background-color: red;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    /* z-index: -1; */
+}
+/*a propriedade position com valor relativo mantem o normal flow e nos da a liberdade de deslocar a nossa caixa levando em relação a sua posição original. Ou seja, virtualmente ele mantem a sua posição de origem e conseguimos mexer em sua localidade com base nisso. */
+
+/* -------------------------------------------------- */
+
+
+#section2{
+    border: 1px solid black;
+    position: relative;
+}
+
+.box2{
+    background-color: blue;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+}
+/* O position com valor absolito não respeita o normal flow e ele é sempre relativo a algum lugar, ao block que ela está dentro (você precisa especidicar isso). Para tal você precisa colocar um position do containing box, neste exemplo estarei colocando o position relative pois ele não altera o meu flow. Caso você não determine que lugar é esse ele vai considerar a página toda (Inicial contaning block) */
+
+/* -------------------------------------------------- */
+
+.fixed img{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    right: 20px;
+    bottom: 20px;
+}
+
+/* o position fixed assim como o absolute ele não segue o normal flow mas diferente do abolute, não adianta você especificar um containing box, ele esta fixo ao inicial containing box */
+
+.fixed{
+    background-color: transparent;
+}
+
+/* -------------------------------------------------- */
+
+#section4{
+    border: 1px solid black;
+    height: 300px;
+}
+.box4{
+    background-color: blueviolet;
+    position: sticky;
+    top: 30px;/*  isso significa que quando eu rolar a minha página e ela estiver 20px de distancia do elemento com a propriedade sticky vai começar o efeito (...)  */
+    right: 20px; /*Perceba que este valor não esta funcionando. Isso se da por não haver um scrool lateral*/
+    z-index: -1;
+ } /*o position sticky respeita o normal flow e ele é relativo ao elemento pai que tenha o mecanismo de scrolll (geramente é o inicial containig box, ou seja, a pag toda). O elento em que foi aplicado essa propriedade vai rolar até o limite da caixa em que ele esta inserido*/
+
+#section5{
+    border: 1px solid black;
+    height: 300px;
+    overflow: scroll;
+    position: sticky;
+}
+
+.box5{
+    background-color: tomato;
+    position: sticky;
+    top: 30px;
+    z-index: -1;
+}
+
