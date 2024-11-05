@@ -22,30 +22,63 @@
 
     <main>
         <h1>Positions</h1>
+        <section id="section1">
         <h2>Position Relative</h2>
-        <section id="seection1">
-            <div></div>
+            <div class="preenchimento-top-bottom" ></div>
             <div class="box1"></div>
-            <div></div>
+            <div class="preenchimento-top-bottom"></div>
+            <p>The element is positioned according to the <strong>normal flow</strong> of the document, and then offset relative to itself based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements. </p>
+            <p>A propriedade position com valor relative mantém o elemento no <strong>fluxo normal da página</strong>, mas permite deslocá-lo em relação à sua posição original. Ou seja, o elemento permanece no local onde estaria <span>(virtualmente) </span>normalmente, mas podemos ajustá-lo visualmente a partir desse ponto, usando as propriedades top, right, bottom e left para controlá-lo com base em sua posição inicial. </p>
+        </section>
+
+        <section id="section2">
         <h2>Position Absolute</h2>
-        <section id="seection2">
-            <div></div>
+            <div class="preenchimento-top-bottom"></div>
             <div class="box2"></div>
-            <div></div>
+            <div class="preenchimento-top-bottom">
+            </div>
+            <p>The element is removed from the <strong>normal document flow</strong>, and no space is created for the element in the page layout. The element is positioned relative to its closest positioned ancestor (if any) or to the initial containing block. Its final position is determined by the values of top, right, bottom, and left. <br>
+            This value creates a new stacking context when the value of z-index is not auto. The margins of absolutely positioned boxes do not collapse with other margins.</p>
+            <p>A propriedade position com valor absolute remove o elemento do <strong>fluxo normal da página</strong>, tornando-o sempre posicionado em relação a um elemento específico. Para definir esse ponto de referência, é necessário que o elemento ‘containing box’ (elemento pai) tenha uma posição definida, como position utilizado neste exemplo que é o: relative, pois isso não altera o fluxo dos demais elementos. Caso nenhum elemento de referência seja especificado, o posicionamento absolute será em relação ao bloco de conteúdo inicial da página (Initial Containing Block).</p>
+        </section>
+
+        <section id="section3">
         <h2>Position Fixed</h2>
-        <section id="seection3">
-            <div></div>
-            <div class="box3"></div>
-            <div></div>
+            <div class="preenchimento-top-bottom"></div>
+            <a href="../navegation/index-nav.html" target="_blank"><img src="assets/position-fixed.png" alt="old computer" class="box3"></a>
+            <div class="preenchimento-top-bottom"></div>
+            <p>The element is <strong>removed from the normal document flow</strong>, and no space is created for the element in the page layout. The element is positioned relative to its initial containing block, which is the viewport in the case of visual media. Its final position is determined by the values of top, right, bottom, and left.
+            This value always creates a new stacking context. In printed documents, the element is placed in the same position on every page.</p>
+            <p>A propriedade position: fixed, assim como absolute, <strong>remove o elemento do fluxo normal da página</strong>. Porém, ao contrário do absolute, o fixed não é afetado pelo elemento pai (containing box) — ele permanece sempre fixo em relação ao bloco de conteúdo inicial da página (Initial Containing Block), ou seja, a própria janela de visualização (viewport).</p>
+        </section>
+        
+        <section id="section4">
         <h2>Position Sticky</h2>
-        <section id="seection4">
-            <div></div>
+            <div class="preenchimento-top-bottom"></div>
             <div class="box4"></div>
-            <div></div>
+            <div class="preenchimento-top-bottom"></div>
+            <p>The element is positioned according to the <strong>normal flow</strong> of the document, and then offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor), including table-related elements, based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements.
+            This value always creates a new stacking context. Note that a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when overflow is hidden, scroll, auto, or overlay), even if that ancestor isn't the nearest actually scrolling ancestor.</p>
+            <p>A propriedade position: sticky mantém o elemento no <strong>fluxo normal</strong> da página e permite que ele se comporte de forma híbrida entre relative e fixed. O elemento permanece posicionado de forma relativa até que atinja um limite dentro do elemento pai com rolagem (geralmente o bloco de conteúdo inicial, como a página toda). A partir desse ponto, ele se fixa e acompanha a rolagem até o final da área do contêiner em que está inserido.</p>
+
+
+            <p> <strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.Lorem ipsum, dolor sit amet co<strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong>nsectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam <strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong>delectus, dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, dolor sunt cumque quaerat<strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong> mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, <strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong>dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos al<strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong>ias distinctio earum ab exercitationem.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.</p>
+
+            <p> <strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.Lorem ipsum, dolor sit amet co<strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong>nsectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam <strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong>delectus, dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, dolor sunt cumque quaerat<strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong> mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, <strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong>dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos al<strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong>ias distinctio earum ab exercitationem.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.</p>
+
+        </section>
+
+        <section id="section5">
+        
         <h2>Position Sticky Overflow</h2>
-        <section id="seection1">
-            <div></div>
-            <div class="box1"></div>
-            <div></div>
+            <div class="preenchimento-top-bottom"></div>
+            <div class="box5"></div>
+            <div class="preenchimento-top-bottom"></div>
+            <p> <strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.Lorem ipsum, dolor sit amet co<strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong>nsectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam <strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong>delectus, dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, dolor sunt cumque quaerat<strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong> mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.</p>
+
+            <p> <strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.Lorem ipsum, dolor sit amet co<strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong>nsectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam <strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong>delectus, dolor sunt cumque quaerat mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eius perferendis nulla itaque atque magnam delectus, dolor sunt cumque quaerat<strong><span>Enchendo linguiça para ter a barra de rolagem</span> </strong> mollitia quos labore ipsum, dignissimos alias distinctio earum ab exercitationem.</p>
+
         </section>
     </main>
