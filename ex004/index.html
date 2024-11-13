@@ -7,17 +7,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="item">A</div>
-        <div class="item">B</div>
-        <div class="item">C</div>
-        <div class="item">D</div>
-        <div class="item">E</div>
-        <div class="item">F</div>
-        <div class="item">G</div>
-    </div>
+    <h1>Flex box</h1>
+    <p>No Flexbox, temos dois eixos principais para alinhar os itens:</p>
+    
+    <ul>
+    
+        <li>Eixo principal (main axis): é o eixo principal de alinhamento dos itens e depende da direção do flex-direction.</li>
+        <li>Eixo cruzado (cross axis): é o eixo perpendicular ao eixo principal e se ajusta de acordo com a direção definida no flex-direction.</li>
+        <li>Obs: Os itens vão sempre seguir e são sempre colocados no sentido do main axis. </li>
+    </ul>
+
     <p>É fundamental identificar corretamente quem é o flex-container e quem são os flex-items, pois o display: flex é aplicado no contêiner pai (a tag que aninha os itens se serem alinhados). Essa configuração transforma o contêiner em um flexbox e permite que os elementos filhos (flex-items) sejam posicionados e dimensionados de acordo com as propriedades flexíveis</p>
 
+    <h2>Direções e eixos flex box CSS</h2>
+    <h3>Flex direction row</h3>
+
+    <p>The flex container's main-axis is defined to be the same as the text direction. The main-start and main-end points are the same as the content direction.</p>
+    <p>A propriedade flex-direction em Flexbox define a direção principal (main axis) na qual os itens dentro de um container flex serão dispostos. Por padrão, essa direção é row, o que organiza os itens em linha, da esquerda para a direita. </p>
+
+
+
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+
+    <ul>
+        <li>
+            Direção padrão, que alinha os itens horizontalmente, da esquerda para a direita.</li>
+            <li>O eixo principal (main axis) é horizontal, da esquerda para a direita.</li>
+            <li>O eixo cruzado (cross axis) é vertical, de cima para baixo.</li>
+    </ul>
+
+        <h3>Flex direction row-reverse</h3>
     <div class="container2">
         <div class="item2">1</div>
         <div class="item2">2</div>
@@ -27,6 +54,49 @@
         <div class="item2">6</div>
         <div class="item2">7</div>
     </div>
-    <p>A direção padrão (default) da propriedade flex é row (linha), o que alinha os itens do flex container da esquerda para a direita. se eu utilizar o flex-direction:row-reverse; (no container pau) continuaremos tendo os itens em linha porém teremos o modo reverso ou seja os itens estarão dispostos da direita para a esquerda. A mesma lógica serve para o column-reverse </p>
+
+    <ul>
+        <li>Alinha os itens na mesma linha, porém de forma invertida, da direita para a esquerda.</li>
+        <li>O eixo principal continua horizontal, mas se dá da direita para a esquerda.</li>
+        <li>O eixo cruzado permanece vertical, de cima para baixo.</li>
+    </ul>
+
+    <h3>Flex direction column</h3>
+    <div class="container3">
+        <div class="item3">1</div>
+        <div class="item3">2</div>
+        <div class="item3">3</div>
+        <div class="item3">4</div>
+        <div class="item3">5</div>
+        <div class="item3">6</div>
+        <div class="item3">7</div>
+    </div>
+
+    <ul>
+        <li>Alinha os itens em uma coluna, de cima para baixo.</li>
+        <li>O eixo principal torna-se vertical, de cima para baixo.</li>
+        <li>O eixo cruzado fica horizontal, da esquerda para a direita.</li>
+    </ul>
+
+    <h3>Flex direction column-reverse</h3>
+    <div class="container4">
+        <div class="item4">1</div>
+        <div class="item4">2</div>
+        <div class="item4">3</div>
+        <div class="item4">4</div>
+        <div class="item4">5</div>
+        <div class="item4">6</div>
+        <div class="item4">7</div>
+    </div>
+
+    <ul>
+        <li>Alinha os itens em coluna, mas de forma invertida, de baixo para cima.</li>
+        <li>O eixo principal fica vertical, começando de baixo para cima.</li>
+        <li>O eixo cruzado permanece horizontal, da esquerda para a direita.</li>
+    </ul>
+
+    <p> <strong> Observação: flex-direction é sempre aplicada no container pai, pois é ele que controla a disposição dos itens internos.</strong>
+    </p>
+
 </body>
 </html>
