@@ -1,0 +1,27 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 26px;
+    background-color: var(--color1);
+}
+
+#leftside{
+    font: var(--font-md);
+}
+
+
+#rightside{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+ul li{
+    width: 150px;
+    padding-inline: 23px;
+
+}
+
+ul li:nth-child(1){
+    text-align: end;
+}

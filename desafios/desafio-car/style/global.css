@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color1:#F2F2F2;
+    --color2:#D9D9D9;
+    --color3:#A6A6A6;
+    --color4:#565759;
+    --color5:#08080D;
+    --font-family: "Fira Sans", sans-serif;
+    --font-sm: 200 12px var(--font-family);
+    --font-md:600 16px var(--font-family);
+    --font-lg: 800 32px var(--font-family);
+}
+
+body{
+font-family: var(--font-family);
+}
+
+a{
+    text-decoration: none;
+    color: var(--color4);
+}
+
+a:hover{
+    color: var(--color5);
+    text-decoration: underline;
+}
+
+li{
+    list-style: none;
+}
+
