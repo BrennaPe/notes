@@ -17,11 +17,11 @@ header{
 }
 
 ul li{
-    width: 150px;
+    /* width: 150px; */
     padding-inline: 23px;
 
 }
 
-ul li:nth-child(1){
+ul li:nth-child(1) #rightside{
     text-align: end;
 }
