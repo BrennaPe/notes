@@ -34,3 +34,7 @@ li{
     list-style: none;
 }
 
+.bg-color{
+    background-color: var(--color1);
+}
+

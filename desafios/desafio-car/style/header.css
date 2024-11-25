@@ -3,6 +3,8 @@ header{
     justify-content: space-between;
     padding: 26px;
     background-color: var(--color1);
+    max-width: 900px ;
+    margin: auto;
 }
 
 #leftside{

@@ -1,0 +1,24 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    gap: 24px;
+    padding: 32px;
+    margin: auto;
+}
+
+main a{
+    width: 380px;
+    height: 250px;
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: var(--font-md);
+    border-radius: 2%;
+    background-color: rgba(229, 229, 229, 0.792);
+}
+
+main a:hover{
+    box-shadow: 5px 5px 15px 5px var(--color3);
+}
