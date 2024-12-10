@@ -9,11 +9,13 @@
 }
 
 body{
-    height: 100vh;
+    height: 100%;
     background-image: url(bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    padding-inline: 16px;
+    padding-block: 16px;
 }
 
 /*----------------------HEADER--------------------*/
@@ -21,14 +23,18 @@ body{
 header{
     display: flex;
     justify-content: space-between;
+    /* border: 1px solid red; */
+
 }
 
 #left-side>h1{
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.532);
-    padding: 12px;
-    padding-left: 44px;
-    width: 50vw;
+    justify-content: flex-start;
+    /* padding-left: 44px; */
+    /* width: 50vw; */
+    /* border: 1px solid red; */
+
 }
 
 #right-side{
@@ -40,13 +46,15 @@ header{
     list-style: none;
     display: flex;
     justify-content: space-around;
-    width: 50vw;
-    padding: 12px;
+    gap: 16px;
+    /* border: 1px solid red; */
+    /* padding: 12px; */
 }
 
 #right-side a{
     text-decoration: none;
     color: rgba(255, 255, 255, 0.532);
+
 }
 
 #right-side a:hover{
