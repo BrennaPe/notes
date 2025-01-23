@@ -14,6 +14,11 @@ body{
     background-size: cover;
     height: 100vh;
     background-attachment: fixed;
+     /* adição de codigo para que o footer grude no bottom da página */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupa toda a tela */
+
 }
 
 /*----------------------HEADER--------------------*/
@@ -69,6 +74,7 @@ main{
 
 main>h1{
     text-align: center;
+    
 }
 
 ul{
@@ -76,7 +82,7 @@ ul{
 }
 
 li>a{
-    color: rgb(137	92	52);
+    color: rgb(75, 49, 26);
     text-decoration: none;
     font-weight: 600;
 }
@@ -84,4 +90,38 @@ li>a{
 li>a:hover{
     text-decoration: underline;
     color: black;
+}
+
+
+/* -------------------FOOTER--------------------- */
+footer{
+    text-align: center;
+    font-size: .8rem;
+    color: rgba(255, 255, 255, 0.533);
+    padding: 8px;
+}
+
+footer>a{
+    /* color: rgb(148	122	43); */
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.59);
+    font-weight: 700;
+    margin-top: auto; /* Empurra o footer para o final */
+}
+
+footer>a:hover{
+    text-decoration: underline;
+}
+
+/* -------------------MEDIA QUERIES------------------- */
+
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+    main{
+    width: 85%;
+    }
+
+    main ul li{
+        margin-top: 8px;
+    }
 }
