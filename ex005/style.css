@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: linear-gradient(90deg, rgba(230,136,65,1) 0%, rgba(250,147,26,1) 42%, rgba(255,218,102,1) 100%);
+    /* border: 2px solid rgb(255, 0, 0); */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ------------------HEADER------------------- */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    padding: 12px;
+    width: 768px;
+    /* border: 2px solid red; */
+    margin: 0px auto;
+}
+
+#left-side>h1{
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.532);
+    justify-content: flex-start;
+    /* padding-left: 44px; */
+    /* width: 50vw; */
+    /* border: 1px solid red; */
+
+}
+
+#left-side>h1>a{
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.532);
+    justify-content: flex-start;
+    text-decoration: none;
+    /* padding-left: 44px; */
+    /* width: 50vw; */
+    /* border: 1px solid red; */
+}
+
+#left-side>h1>a:hover{
+    text-decoration: underline;
+}
+
+#right-side{
+    align-items: center;
+    display: flex;
+}
+
+#right-side>ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 16px;
+    /* border: 1px solid red; */
+    /* padding: 12px; */
+}
+
+#right-side a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.532);
+
+}
+
+#right-side a:hover{
+    text-decoration: underline;
+}
+
+/* ---------------------MAIN------------------- */
+
+main{
+    background: rgba(255, 255, 255, 0.448);
+    max-width: 768px;
+    border-radius: 10px;
+    padding: 20px;
+    line-height: 1.5rem;
+    margin: 10px auto; /* Define um espaçamento fixo no topo e na parte inferior */
+}
+
+main h1{
+    margin-bottom: 10px;
+}
+
+p{
+    margin-top: 10px;
+}
+
+main ul li{
+    list-style: inside;
+}
+
+#container{
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+div#bg-1{
+    height: 100px;
+    width: 100px;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 50%;
+
+    
+}
+div#bg-2{
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(90deg, rgba(65,143,230,1) 0%, rgba(171,185,251,1) 44%, rgba(102,255,215,1) 100%);
+    border-radius: 50%;
+}
+
+div#bg-3{
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(172,45,253,1) 100%);
+    border-radius: 50%;
+    /*box-shadow: 
+     0 0 5px #ff00ff, 
+    0 0 10px #ff00ff, 
+    0 0 20px #ff00ff,
+    0 0 40px #00ffff, Second color for layering
+     0 0 60px #00ffff;  */
+}
+
+#bg-1:hover{
+    box-shadow: 
+    0 0 5px #dfe5ff,
+    0 0 10px #dfe5ff,
+    0 0 20px #dfe5ff,
+    0 0 30px #abb9fb,
+    0 0 40px #abb9fb;
+
+}
+
+#bg-2:hover{
+    box-shadow: 
+    0 0 5px #00ffbb,
+    0 0 10px #00ffbb,
+    0 0 20px #59facf,
+    0 0 30px #85fbdb,
+    0 0 40px #85fbdb;
+
+}
+
+#bg-3:hover{
+    box-shadow: 
+    0 0 5px #ac2dfd,
+    0 0 10px #ac2dfd,
+    0 0 20px #ac2dfd,
+    0 0 30px #c27bef,
+    0 0 40px #c27bef;
+
+}
+
+/* ------------ASIDE----------- */
+
+aside ul li{
+    list-style: inside;
+}
+
+aside ul li a{
+    color: black;
+}
+
+/* -----VALORES DOS SHADOWS----------- */
+
+/* 1.	First value (horizontal offset):
+Moves the shadow left or right.
+	•	Positive values: Move the shadow to the right.
+	•	Negative values: Move the shadow to the left.
+	2.	Second value (vertical offset):
+Moves the shadow up or down.
+	•	Positive values: Move the shadow downward.
+	•	Negative values: Move the shadow upward.
+	3.	Third value (blur radius):
+Defines how soft or blurry the shadow appears.
+	•	Larger values: Create a softer and more spread-out shadow.
+	•	Smaller values (or 0): Create a sharp shadow with no blur.
+	4.	Optional fourth value (spread radius, only in box-shadow):
+Increases or decreases the size of the shadow.
+	•	Positive values: Expand the shadow outward.
+	•	Negative values: Shrink the shadow inward. */
+
+/* ---------------------FOOTER------------------ */
+
+footer{
+    text-align: center;
+    font-size: .8rem;
+    color: rgba(255, 255, 255, 0.533);
+    padding: 8px;
+    margin-top: auto;
+}
+
+footer>a{
+    /* color: rgb(148	122	43); */
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.59);
+    font-weight: 700;
+    margin-top: auto; /* Empurra o footer para o final */
+}
+
+footer>a:hover{
+    text-decoration: underline;
+}
+
+/* ----------------MEDIA QUERIES PHONE------------- */
+
+@media screen and (max-width: 768px) {
+    header{
+        max-width: 95%;
+    }
+
+    main{
+        max-width: 90%;
+    }
+
+    div#bg-1{
+        width: 70px;
+        height: 70px;
+    }
+
+    div#bg-2{
+        width: 70px;
+        height: 70px;
+    }
+
+    div#bg-3{
+        width: 70px;
+        height: 70px;
+    }
+
+    
+}
