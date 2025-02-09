@@ -135,3 +135,85 @@ main{
     0px 0px 20px rgb(249, 187, 0),
     0px 0px 40px rgb(249, 187, 0);
 }
+
+/* ------------------MEDIA QUERIES---------------- */
+
+@media screen and (min-width: 782px) {
+
+    #container{
+        height: 600px;
+        width: 1100px;
+        margin: 0px 100px;
+        transition: all 0.5s ease-in-out; /* Smooth transition */
+    }
+
+
+    header h1{
+       display: flex;
+       font-weight: 300;
+       /* border: 1px solid red; */
+    }
+
+    header ul{
+        /* border: 1px solid black; */
+        justify-content: right;
+        gap: 34px;
+    }
+
+    header h1:hover{
+        color:rgb(249, 187, 0); ;
+     }
+
+     header h1 span{
+        font-weight: 700;
+     }
+
+     main{
+        /* border: 2px solid red; */
+        display: flex;
+        padding-bottom: 24px;
+        height: 90%;
+     }
+
+     #container-picture, #text{
+        flex: 1; /* Makes both take up equal space */
+        height: 100%;
+     }
+
+     #container-picture{
+        /* border: 2px solid grey; */
+        margin-top: 12px;
+        display: flex;
+     }
+
+     #picture{
+        /* border: 1px solid blue; */
+        background-size: cover;
+        width: 350px;
+        height: 350px;
+        /* float: left; */
+     }
+
+     #container-text{
+        /* border: 1px solid red; */
+        width: 400px;
+     }
+
+     #text{
+        /* border: 1px solid green; */
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0px;
+
+     }
+
+     #text #p2:hover{
+        color:rgb(249, 187, 0); 
+     }
+
+     .button{
+        width: 40%;
+    }
+}
