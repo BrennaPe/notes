@@ -12,56 +12,60 @@
 <body>
     <header>
         <div id="left-side">
-            <h1>Note Making</h1>
+            <h1><a href="../index.html">Note Making</a></h1>
         </div>
-    <div id="right-side">
+    <nav id="right-side">
         <ul>
             <li><a href="https://www.cursoemvideo.com/login/" target="_blank">Guanabara</a></li>
             <li><a href="https://app.rocketseat.com.br/?type=ALL" target="_blank">Rocketseat</a></li>
         </ul>
-    </div>
+    </nav>
     </header>
+
+
     <main>
-        <h1>Id and Class</h1>
-    
-        <p>
-            O <strong>atributo "id"</strong> é um identificador único para um elemento HTML.
-            Podemos compará-lo ao CPF ou RG de uma pessoa, que serve para identificar exclusivamente um indivíduo.
-            Da mesma forma, um "id" deve ser único dentro da página — ou seja, cada elemento pode ter apenas um id exclusivo.
-        </p>
+        <div id="container-main">
+            <h1>Id and Class</h1>
+            <p>
+                O <strong>atributo "id"</strong> é um identificador único para um elemento HTML.
+                Podemos compará-lo ao CPF ou RG de uma pessoa, que serve para identificar exclusivamente um indivíduo.
+                Da mesma forma, um "id" deve ser único dentro da página — ou seja, cada elemento pode ter apenas um id exclusivo.
+            </p>
+            <p>
+                Já o <strong>atributo "class"</strong> é como um grupo ou categoria.
+                Ele permite que vários elementos compartilhem as mesmas configurações ou estilos no CSS.
+                Isso é útil quando queremos aplicar as mesmas regras de formatação para vários elementos de uma vez.
+            </p>
+            
+            <h2>Resumo:</h2>
+            
+            <ul>
+                 <li>"id" é exclusivo para um único elemento por página.</li>
+                <li>"class" pode ser usada em vários elementos ao mesmo tempo.</li>
+            </ul>
+            
+            <h3>Use id="" when…</h3>
+            <ul>
+                <li>You need to uniquely identify one specific element.</li>
+                <li>The element appears only once on the page.</li>
+                <li>You plan to target it with JavaScript for unique functionality.</li>
+            </ul>
+            
+            <h3>Use class="" when…</h3>
+                <ul>
+            <li>You need to apply the same style to multiple elements.</li>
+            <li>More than one element should s\hare the same CSS rules.</li>
+            <li>You want to apply the same settings but still allow flexibility.</li>
+                </ul>
+        </div>
 
-        <p>
-            Já o <strong>atributo "class"</strong> é como um grupo ou categoria.
-            Ele permite que vários elementos compartilhem as mesmas configurações ou estilos no CSS.
-            Isso é útil quando queremos aplicar as mesmas regras de formatação para vários elementos de uma vez.
-        </p>
-
-<h2>Resumo:</h2>
-
-<ul>
-     <li>"id" é exclusivo para um único elemento por página.</li>
-    <li>"class" pode ser usada em vários elementos ao mesmo tempo.</li>
-</ul>
-
-<h3>Use id="" when…</h3>
-<ul>
-    <li>You need to uniquely identify one specific element.</li>
-    <li>The element appears only once on the page.</li>
-    <li>You plan to target it with JavaScript for unique functionality.</li>
-</ul>
-
-<h3>Use class="" when…</h3>
-	<ul>
-        <li>You need to apply the same style to multiple elements.</li>
-        <li>More than one element should s\hare the same CSS rules.</li>
-        <li>You want to apply the same settings but still allow flexibility.</li>
-    </ul>
-
-    <h3>When in Doubt?</h3>
-        <ul>
-            <li>If you’re styling one unique element → Use id=""</li>
-            <li>If you’re styling many similar elements → Use class=""</li>
-        </ul>
+        <div id="container-aside">
+            <h3>When in Doubt?</h3>
+                <ul>
+                    <li>If you’re styling one unique element → Use id=""</li>
+                    <li>If you’re styling many similar elements → Use class=""</li>
+                </ul>
+        </div>
     </main>
 </body>
 </html>
