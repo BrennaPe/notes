@@ -3,10 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MetaData</title>
+    <title>Metadata</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <header>
+        <div id="left-side">
+            <h1>Note Making</h1>
+        </div>
+    <div id="right-side">
+        <ul>
+            <li><a href="https://www.cursoemvideo.com/login/" target="_blank">Guanabara</a></li>
+            <li><a href="https://app.rocketseat.com.br/?type=ALL" target="_blank">Rocketseat</a></li>
+        </ul>
+    </div>
+    </header>
+
+    <main>
+        <h1> Meta tags</h1>
+        <p>Meta tags provide information about your HTML document. This information (called metadata) isn’t shown directly on the page, but it helps browsers, search engines, and devices understand how to handle your content. <br>
+        You should place all meta tags inside the &lt;head&gt; section of your HTML.</p>
+
+        <h2>What can Meta Tags do?</h2>
+        <ul>
+            <li>Set the character encoding &#40;e.g, UTF-8&#41;</li>
+            <details>
+                <summary>What does “Set the character encoding (e.g., UTF-8)” mean?
+                </summary>
+                <p>Every web page is made of text - and that text includes not just letters like A-Z, but also numbers, punctuation, accents &#40;like à, é,ç&#41;, and even symbols or emojis. </p>
+                <p><strong>But heres a thing:</strong> For the bowser to correctly display all those characters, it needs to know which character set to use. That´s where character encoding comes in. </p>
+                <h2>What is UTF-8?</h2>
+                <p>UTF-8 is the most popular character encoding on the web. It can represent every character in almost every language.</p>
+                <h3>Some examples of characters UTF-8 supports:</h3>
+                <ul>
+                    <li>English letters: A B C
+                    </li>
+                    <li>Portuguese accents: ã é ô ç</li>
+                    <li>Math symbols: ± √ ≈ </li>
+                </ul>
+                <h3>Why is this important</h3>
+                <p>OlÃ¡ vocÃª estÃ¡ bem?</p>
+                <h3>How do you set it?</h3>
+                <p>&lt;meta charset="UTF-8"&gt;</p>
+                <p><strong>That tells the browser:</strong> 
+                    “Hey, this page uses UTF-8, so interpret the characters correctly.”
+                </p>
+            </details>
+            <li>Tell search engines what your page is about &#40;Using key words and descriptions&#41; </li>
+            <li>Say who the Author of the page is</li>
+            <li>Automatically refresh the page after a few seconds</li>
+            <li>Make your website responsive on phones and tablets &#40;Using viewport tag&#41;</li>
+            <li>Prevent your site from being automatically translated by brownsers</li>
+            <li>Control how browsers cache your pages</li>
+        </ul>
+
+        <h2>Why use Meta Descriptions?</h2>
+        <p>A meta description is a short summary of a webpage. It appers under the page title in <strong>search engine results</strong> <br> Benefits: </p>
+        <ol>
+            <li>More Clicks - A clear and attractive summary can encourage users to visit your page.</li>
+            <li>Clarity - It helps users quickly understand what the page is about</li>
+            <li>Better results - Search engines may use your meta description as a preview.</li>
+        </ol>
+    </main>
+
+    <h3>EXAMPLES</h3>
+    <p>Set the character encoding (e.g., UTF-8) So the browser can display accents, symbols, and emojis correctly. <br>
+        <strong> &lt;meta charset="UTF-8"&gt; </strong>
+    </p>
+    <p>Tell search engines what your page is about (keywords & description). It Helps with SEO (Search Engine Optimization). <br>
+    <strong> &lt;meta name="description" content="Learn what HTML meta tags are and how to use them. Great for SEO and accessibility."&gt; <br>
+    &lt;meta name="keywords" content="HTML, meta tags, SEO, web development, coding, tutorial"&gt; </strong>
+    </p>
+    <p>
+        Say who the author of the page is. It tells who wrote or owns the content. <br>
+        &lt;meta name="author" content="Your Name"&gt;
+    </p>
+    <p>
+        Automatically refresh the page after a few seconds. It is good for live dashboards or temporary pages. <br>
+        <strong> &lt;meta http-equiv="refresh" content="10"&gt;</strong>. This will refresh the page every 10 seconds. You can change the number.
+    </p>
+    <p>
+        Make your website responsive on phones and tablets (viewport tag). Ensures your site adapts to smaller screens. <br>
+        <strong>
+            &lt; meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        </strong>
+    </p>
+
+    <p>
+        Prevent your site from being automatically translated by browsers. Stops Google Translate or other tools from auto-translating. <br>
+        <strong>&lt;meta name="google" content="notranslate"&gt;</strong>
+    </p>
+
+    <p>
+        Control how browsers cache your pages. To control whether the browser stores your page for speed or always loads the latest version. <br>
+        <strong>
+            &lt;meta http-equiv="Cache-Control" content="no-cache"&gt;<br>
+            &lt;meta http-equiv="Pragma" content="no-cache"&gt;<br>
+            &lt;meta http-equiv="Expires" content="0"&gt;
+        </strong>
+    </p>
+    <details>
+        <summary>What is Browser cache?</summary>
+        <p>When you visit a website, yout browser (like Chrome or Safari) stores so me files on your  computes. This includes things like: Images, Stylesheets (CSS), JavaScript files and even some HTML. This is called caching.</p>
+        <h3>Why does the crowser cache files?</h3>
+        <p>Intesd of downloading everything again from the internet, the browser just uses the local (already saved) files. <strong> So, the bbrowser cache files to make the site load faster the next time you visit.</strong></p>
+        <p>Caching become a problem when: You update your site, the <strong>visitors still see the old version.</strong> You want people to always <strong>see the the newest content.</strong></p>
+
+        <h3>To prevent browsers from using cache</h3>
+        <p>To prevent browsers from using cache (and always load the newest version of your site), you can add these three meta tags inside your &gt;head&lt; section:<br>
+            <strong>
+                &lt;meta http-equiv="Cache-Control" content="no-cache"&gt;<br>
+                &lt;meta http-equiv="Pragma" content="no-cache"&gt;<br>
+                &lt;meta http-equiv="Expires" content="0"&gt; <br>
+                These meta tags tell the browser: “Don’t save anything. Always get the fresh version.”
+            </strong>
+        </p>
+        <p>What do they mean?</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Meta Tag</th>
+                    <th>What it Does</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cache-Control: no-cache
+                    </td>
+                    <td>Asks the browser to revalidate the content with the server before using cache.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pragma: no-cache</td>
+                    <td>An older version of Cache-Control. Still used for compatibility.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Expires: 0</td>
+                    <td>Says the content is already expired, so the browser must reload it.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>What It does?</p>
+        <ul>
+            <li>Cache-Control: no-cache: Browser must check with the server before using anything from the cache.</li>
+            <li>Pragma: no-cache: Backup for older browsers.</li>
+            <li>Expires: 0: Tells browser: “This page is already expired, reload it.”</li>
+        </ul>
+        <p>Use these especially when your content changes often or you’re testing updates during development.</p>
+
+        <h3>Example to allow caching for 1 hour </h3>
+        <p>
+            <strong>
+                &lt;meta http-equiv="Cache-Control" content="no-cache"&gt; <br>
+                &lt;meta http-equiv="Cache-Control" content="public, max-age=3600"&gt; <br>
+                &lt;meta http-equiv="Expires" content="Tue, 01 Jan 2030 00:00:00 GMT"&gt; <br>
+                &lt;title&gt;Cache Enabled Example&lt;/title&gt;
+            </strong>
+        </p>
+        <p>What this does:
+            <ul>
+                <li>Cache-Control: public, max-age=3600 </li>
+                <li>llows browsers and proxies to cache the content for 3600 seconds (1 hour).</li>
+                <li>Expires: [future date]. Sets an exact date/time when the content should be considered “expired” and rechecked.</li>
+            </ul>
+        </p>
+    </details>
 </body>
 </html>
+
