@@ -111,7 +111,7 @@ div#container-aside a{
 /* ------------MEDIA QUERIES--------------- */
 
 
-@media screen and (min-width: 480px) and (max-width: 800px) {
+@media screen and (max-width: 800px) {
 
     body, html{
         background-attachment: fixed;
