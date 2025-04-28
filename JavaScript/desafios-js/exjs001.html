@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de digito</title>
+</head>
+<body>
+    <main>
+        <h1>Verificar se o número é Par ou Ímpar</h1>
+        <input type="number" name="digito1" id="digito1">
+        <input type="button" value="Verificar" onclick="verificar()">
+        <p id="resultado"></p>
+    </main>
+
+    <script>
+        function verificar(){
+            let digito = window.document.getElementById("digito1")
+            let dgt = Number(digito.value);
+            let result = window.document.getElementById("resultado")
+            if (dgt % 2 == 0) {
+                result.innerHTML = `O número ${dgt} é Par!`
+            } else {
+                result.innerHTML = `O número ${dgt} é Ímpar!`
+            }
+        }
+    </script>
+</body>
+</html>
