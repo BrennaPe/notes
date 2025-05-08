@@ -4,110 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tipos Primitivos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Tipos Primitivos JS</h1>
-    <h2> O que são tipos primitivos?</h2>
-    <p>Eles são chamados de primitivos porque armazenam valores imutáveis e não possuem métodos próprios (exceto symbol). Os tipos primitivos no JavaScript são os tipos mais básicos de dados que podemos usar. Eles são chamados de primitivos porque:</p>
-    <ol>
-        <li>São Simples: Não têm estrutura complexa, como objetos ou arrays</li>
-        <li>São imutáveis: Depois que um valor primitivo é criado, ele não pode ser alterado diretamente.</li>
-        <li>Não têm métodos próprios: Exceto o tipo Symbol, que tem alguns métodos especiais. Tipos primitivos não têm métodos próprios, mas o JavaScript “empresta” métodos temporários para usarmos.</li>
-    </ol>
+    <header>
+        <div id="left-side">
+            <h1>Note Making</h1>
+        </div>
+    <div id="right-side">
+        <ul>
+            <li><a href="https://www.cursoemvideo.com/login/" target="_blank">Guanabara</a></li>
+            <li><a href="https://app.rocketseat.com.br/?type=ALL" target="_blank">Rocketseat</a></li>
+        </ul>
+    </div>
+    </header>
 
-    <p><strong>Pense assim:</strong>Um primitivo é como uma fotocópia, você pode usar e criar novas, mas não pode mudar a original.</p>
-    <p>Um exemplo prático seria <span>var nome = "Maria"</span>;
-    nome.toUpperCase(); Resultado= MARIA // Este comando transforma a variavel desejada em maiúsculas. Perceba que ainda será "Maria"! O valor original NÃO mudou pois string é um tipo primitivo..</p>
-
-        <h2>7 tipos primitivos de dados.</h2>
-        <h3>String (string)</h3>
-        <p>Representa textos e deve estar entre aspas simples ('), duplas (") ou crase (` para template literals).</p>
-        <p>Tamplate  literals são strings (textos) que usam crases (`) no lugar de aspas simples (') ou duplas ("). </p>
-        <p>Com Template Literals, você pode: Quebrar linhas dentro da string sem precisar de \n, inserir variáveis direto no texto usando ${ } (sem precisar de +) e criar strings dinâmicas de forma mais fácil e organizada.</p>
+    <main>
+        <h1>Tipos Primitivos JS</h1>
+        <h2> O que são tipos primitivos?</h2>
+        <p>Eles são chamados de primitivos porque armazenam valores imutáveis e não possuem métodos próprios (exceto symbol). Os tipos primitivos no JavaScript são os tipos mais básicos de dados que podemos usar. Eles são chamados de primitivos porque:</p>
+        <ol>
+            <li>São Simples: Não têm estrutura complexa, como objetos ou arrays</li>
+            <li>São imutáveis: Depois que um valor primitivo é criado, ele não pode ser alterado diretamente.</li>
+            <li>Não têm métodos próprios: Exceto o tipo Symbol, que tem alguns métodos especiais. Tipos primitivos não têm métodos próprios, mas o JavaScript “empresta” métodos temporários para usarmos.</li>
+        </ol>
+        <p><strong>Pense assim:</strong>Um primitivo é como uma fotocópia, você pode usar e criar novas, mas não pode mudar a original.</p>
+        <p>Um exemplo prático seria <span>var nome = "Maria"</span>;
+        nome.toUpperCase(); Resultado= MARIA // Este comando transforma a variavel desejada em maiúsculas. Perceba que ainda será "Maria"! O valor original NÃO mudou pois string é um tipo primitivo..</p>
+            <h2>7 tipos primitivos de dados.</h2>
+            <h3>String (string)</h3>
+            <p>Representa textos e deve estar entre aspas simples ('), duplas (") ou crase (` para template literals).</p>
+            <p>Tamplate  literals são strings (textos) que usam crases (`) no lugar de aspas simples (') ou duplas ("). </p>
+            <p>Com Template Literals, você pode: Quebrar linhas dentro da string sem precisar de \n, inserir variáveis direto no texto usando ${ } (sem precisar de +) e criar strings dinâmicas de forma mais fácil e organizada.</p>
         
-        <details>
-            <Summary>Tamplate Literals</Summary>
-            <h4> Exemplo Normal (sem Template Literals) Usando concatenação (com +):</h4>
-            <p>var nome = "Ana"; <br>
-            var idade = 25;<br>
-            var mensagem = "Olá, meu nome é " + nome + " e eu tenho " + idade + " anos."; <br>
-            console.log(mensagem); <br>
-            Olá meu nome é Ana e e tenho 25 anos.
-            </p>
-            <p>Perceba que muitas aspas e + tornam o código difícil de ler.</p>
-            <h4>Exemplo com Template Literals Usando crases e ${}:</h4>
-            <p>var nome = "Ana";<br>
-            var idade = 25; <br>
-            var mensagem = `Olá, meu nome é ${nome} e eu tenho ${idade} anos.`;<br>
-            console.log(mensagem); <br>
-            Olá meu nome é Ana e e tenho 25 anos.
-            </p>
-            <p>Nota-se que sem precisar concatenar (+), o código fica mais limpo e legíve</p>
-            <h4>Outro exemplo: Quebrando linhas facilmente</h4>
-            <p>Sem Template Literals: <br>
-            let texto = "Linha 1\nLinha 2\nLinha 3"; <br>
-            console.log(texto);
-            </p>
-            <p>Com Template Literals: <br>
-                let texto = `Linha 1 <br>
-                Linha 2 <br>
-                Linha 3`; <br>
-                console.log(texto);</p>
-        </details>
-
-        <h3>Number</h3>
-        <p>Representa números inteiros e decimais.</p>
-
-        <h3>3. Boolean (boolean)</h3>
-        <p>Aceita apenas dois valores: true (verdadeiro) ou false (falso).</p>
-
-        <h3>Undefined (undefined)
-        </h3>
-        <p>Quando uma variável existe, mas não tem valor atribuído.</p>
-
-        <h3>Null (null)</h3>
-        <p>Representa ausência de valor (intencional)</p>
-        <p>A diferença entre null e undefined é que o undefined a variável foi declarada, mas não tem valor atribuído. Já o null o valor atribuído é intencionalmente “vazio”.</p>
+            <details>
+                <Summary>Tamplate Literals</Summary>
+                <h4> Exemplo Normal (sem Template Literals) Usando concatenação (com +):</h4>
+                <p>var nome = "Ana"; <br>
+                var idade = 25;<br>
+                var mensagem = "Olá, meu nome é " + nome + " e eu tenho " + idade + " anos."; <br>
+                console.log(mensagem); <br>
+                Olá meu nome é Ana e e tenho 25 anos.
+                </p>
+                <p>Perceba que muitas aspas e + tornam o código difícil de ler.</p>
+                <h4>Exemplo com Template Literals Usando crases e ${}:</h4>
+                <p>var nome = "Ana";<br>
+                var idade = 25; <br>
+                var mensagem = `Olá, meu nome é ${nome} e eu tenho ${idade} anos.`;<br>
+                console.log(mensagem); <br>
+                Olá meu nome é Ana e e tenho 25 anos.
+                </p>
+                <p>Nota-se que sem precisar concatenar (+), o código fica mais limpo e legíve</p>
+                <h4>Outro exemplo: Quebrando linhas facilmente</h4>
+                <p>Sem Template Literals: <br>
+                let texto = "Linha 1\nLinha 2\nLinha 3"; <br>
+                console.log(texto);
+                </p>
+                <p>Com Template Literals: <br>
+                    let texto = `Linha 1 <br>
+                    Linha 2 <br>
+                    Linha 3`; <br>
+                    console.log(texto);</p>
+            </details>
+            <h3>Number</h3>
+            <p>Representa números inteiros e decimais.</p>
+            <h3>3. Boolean (boolean)</h3>
+            <p>Aceita apenas dois valores: true (verdadeiro) ou false (falso).</p>
+            <h3>Undefined (undefined)
+            </h3>
+            <p>Quando uma variável existe, mas não tem valor atribuído.</p>
+            <h3>Null (null)</h3>
+            <p>Representa ausência de valor (intencional)</p>
+            <p>A diferença entre null e undefined é que o undefined a variável foi declarada, mas não tem valor atribuído. Já o null o valor atribuído é intencionalmente “vazio”.</p>
         
-        <details>
-            <summary>Atribuição de valor a uma variável</summary>
-
-            <h4>O que é “atribuir um valor” a uma variável?</h4>
-            <p>Quando criamos (declaramos) uma variável, ela existe, mas ainda não tem um valor até que a gente defina um.</p>
-
-            <p>
-                Exemplo sem valor atribuído (undefined): <br>
-                var nome;  // A variável "nome" foi criada, mas ainda não recebeu um valor <br> 
-                console.log(nome); // undefined <br>
-                Aqui, nome foi declarada, mas como não demos um valor a ela, o JavaScript coloca undefined automaticamente.
-            </p>
-
-            <p>Exemplo com valor atribuído: <br>
-            let nome = "Ana";  // Agora a variável tem um valor atribuído <br>
-            console.log(nome); // "Ana" <br>
-            Agora, nome tem um valor (“Ana”), então não é mais undefined.</p>
-        </details>
-
-        <h3>Symbol (symbol)</h3>
-        <p>Usado para criar valores únicos que não podem ser alterados.</p>
-
-        <details>
-            <summary>Entendendo Symbol</summary>
-
-            <h4>O que é Symbol?</h4>
-            <p>O Symbol é um tipo de dado especial que cria identificadores únicos.
-            Imagine que você precisa dar um rótulo (ou etiqueta) para algo no seu código, mas quer ter certeza absoluta de que ninguém mais usará esse mesmo rótulo.</p>
-
-            <p>Exemplo <br>
-            let id1 = Symbol("id"); // Cria um símbolo <br>
-            let id2 = Symbol("id"); // Outro símbolo, mesmo nome, mas diferente! <br>
-            console.log(id1 === id2); // false (são diferentes!) <br> Mesmo que tenham o mesmo nome ("id"), são símbolos diferentes e únicos. </p>
-
-        </details>
-
-        <h3>BigInt (bigint)</h3>
-        <p>Usado para representar números inteiros muito grandes, além do limite do Number. O BigInt é usado para armazenar números muito grandes, que não cabem no tipo Number.</p>
-        <p>No JavaScript, o maior número seguro que podemos representar com Number é 2⁵³ - 1 (aproximadamente 9 quintilhões!). Se precisar de algo maior, usamos BigInt.</p>
+            <details>
+                <summary>Atribuição de valor a uma variável</summary>
+                <h4>O que é “atribuir um valor” a uma variável?</h4>
+                <p>Quando criamos (declaramos) uma variável, ela existe, mas ainda não tem um valor até que a gente defina um.</p>
+                <p>
+                    Exemplo sem valor atribuído (undefined): <br>
+                    var nome;  // A variável "nome" foi criada, mas ainda não recebeu um valor <br>
+                    console.log(nome); // undefined <br>
+                    Aqui, nome foi declarada, mas como não demos um valor a ela, o JavaScript coloca undefined automaticamente.
+                </p>
+                <p>Exemplo com valor atribuído: <br>
+                let nome = "Ana";  // Agora a variável tem um valor atribuído <br>
+                console.log(nome); // "Ana" <br>
+                Agora, nome tem um valor (“Ana”), então não é mais undefined.</p>
+            </details>
+            <h3>Symbol (symbol)</h3>
+            <p>Usado para criar valores únicos que não podem ser alterados.</p>
+            <details>
+                <summary>Entendendo Symbol</summary>
+                <h4>O que é Symbol?</h4>
+                <p>O Symbol é um tipo de dado especial que cria identificadores únicos.
+                Imagine que você precisa dar um rótulo (ou etiqueta) para algo no seu código, mas quer ter certeza absoluta de que ninguém mais usará esse mesmo rótulo.</p>
+                <p>Exemplo <br>
+                let id1 = Symbol("id"); // Cria um símbolo <br>
+                let id2 = Symbol("id"); // Outro símbolo, mesmo nome, mas diferente! <br>
+                console.log(id1 === id2); // false (são diferentes!) <br> Mesmo que tenham o mesmo nome ("id"), são símbolos diferentes e únicos. </p>
+            </details>
+            <h3>BigInt (bigint)</h3>
+            <p>Usado para representar números inteiros muito grandes, além do limite do Number. O BigInt é usado para armazenar números muito grandes, que não cabem no tipo Number.</p>
+            <p>No JavaScript, o maior número seguro que podemos representar com Number é 2⁵³ - 1 (aproximadamente 9 quintilhões!). Se precisar de algo maior, usamos BigInt.</p>
+    </main>
 
 </body>
 </html>

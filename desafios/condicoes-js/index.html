@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Eleitoral</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <h1><span style="color: rgb(57	102	170	);">B</span><span style="color: rgb(244	189	69);">R</span><span style="color: rgb(99	170	81);">A</span><span style="color: rgb(57	102	170	);">S</span><span style="color: rgb(244	189	69);">I</span><span style="color: rgb(99	170	81);">L</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Saiba mais</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>O seu voto é obrigatório?</h1>
+        <p>No Brasil, o direito ao voto é garantido pela Constituição Federal. O voto é obrigatório para todos os cidadãos alfabetizados que tenham entre 18 e 70 anos de idade. Já o voto é facultativo para jovens de 16 e 17 anos, idosos com mais de 70 anos e analfabetos, ou seja, essas pessoas podem escolher se querem votar ou não.</p>
+        <p>Crianças e adolescentes com menos de 16 anos não podem votar. Para quem é obrigado a votar e não justifica sua ausência, podem ser aplicadas multas e outras consequências, como dificuldades para tirar passaporte ou assumir cargos públicos.</p>
+        <p><strong>Estrangeiros</strong>, mesmo que vivam no Brasil e tenham a idade permitida para votar, não podem votar em eleições brasileiras. O direito ao voto é reservado apenas para cidadãos brasileiros, natos ou naturalizados.
+        Uma exceção ocorre em eleições municipais (prefeito e vereadores) em alguns casos locais, mas apenas para portugueses que tenham o chamado “Estatuto de Igualdade” — um acordo entre Brasil e Portugal que garante direitos políticos recíprocos. Mesmo assim, eles precisam solicitar formalmente esse direito.</p>
+        
+        <aside>
+        <h2>Verifique aqui se o seu voto é obrigatório</h2>
+            <form action="">
+                <label for="idade">Idade</label>
+                <input type="number" name="idade" id="idade" placeholder="Digite sua idade" required>
+                <input type="button" value="Verificar" onclick="verificaIdade()">
+                <p id="resultado"></p>
+            </form>
+        </aside>
+    </main>
+
+    <script>
+        function verificaIdade() {
+            let age = document.getElementById("idade");
+            let ageValue = Number(age.value);
+            let result = document.getElementById("resultado");
+
+            if (ageValue >= 18 && ageValue <= 70){
+                result.innerHTML = `O seu voto é
+                <strong>obrigatório</strong>.`;}
+                else if (ageValue > 120){
+                    result.innerHTML = `Eu acho que você é um vampiro 🧛🏻, não é?`;
+                }
+                else if (ageValue >= 16 || ageValue >= 70){
+                    result.innerHTML = `O seu voto é <strong>facultativo</strong>.`;
+                } 
+                else if (ageValue < 16){
+                    result.innerHTML = `Você <strong>não</strong> pode votar.`;
+                } 
+               
+            }
+
+            let agora = new Date();
+            let hora = agora.getHours();
+            let minutos = agora.getMinutes();
+            if (hora < 12) {
+                alert(`Bom dia! Agora são ${hora}:${minutos}`);
+            } else if (hora < 18) {
+                alert(`Boa tarde!` + `Agora são ${hora}:${minutos}`);
+            } else {
+                alert(`Boa noite! agora são ${hora}:${minutos}`);
+        }
+
+    </script>
+</body>
+</html>
