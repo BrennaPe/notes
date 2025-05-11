@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Relacionais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="left-side">
+            <h1><a href="../index.html">Note Making</a></h1>
+        </div>
+    <div id="right-side">
+        <ul>
+            <li><a href="https://www.cursoemvideo.com/login/" target="_blank">Guanabara</a></li>
+            <li><a href="https://app.rocketseat.com.br/?type=ALL" target="_blank">Rocketseat</a></li>
+        </ul>
+    </div>
+    </header>
+
+    <main>
+        <h1>Operadores em JS</h1>
+        <h2>Operadores Relacionais</h2>
+        <p>Comparison operators are used in logical statements to determine equality or difference between variables or values. Operadores relacionais (também chamados de operadores de comparação) em JavaScript são usados para comparar dois valores. <strong>O resultado de uma comparação sempre é um valor booleano: true ou false.</strong></p>
+        <ul>
+            <li>&gt; Maior</li>
+            <li>&lt; Menor</li>
+            <li>&gt;= Menor ou igual</li>
+            <li>&lt;=Menor ou igual</li>
+            <li>== Igual</li>
+            <li>=== Igual em valor e tipo</li>
+            <li>!= Diferente</li>
+        </ul>
+        <p>Aqui estão os principais operadores relacionais em JavaScript:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Operador</th>
+                    <th>Descrição</th>
+                    <th>Exemplo (a = 5 , b = "5")</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>==</td>
+                    <td>Igual</td>
+                    <td>a == b</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>===</td>
+                    <td>Igual em valor e tipo</td>
+                    <td>a === b</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>!=</td>
+                    <td>Diferente</td>
+                    <td>a != b</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>!==</td>
+                    <td>Diferente em valor e tipo</td>
+                    <td>a !== b</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>&gt;</td>
+                    <td>Maior que</td>
+                    <td>a &gt; 3</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>&lt;</td>
+                    <td>Menor que</td>
+                    <td>a &lt; 3</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>&gt;=</td>
+                    <td>Maior ou igual a</td>
+                    <td>a &gt;= 8</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>&lt;=</td>
+                    <td>Menor ou igual a</td>
+                    <td>a &lt;= 8</td>
+                    <td>true</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Em operadores relacionais as comparações de tamanho são resolvidas antes das comparações de igualdade.
+        <p>Por exemplo: <br>
+            5 > 3 == true <br>
+            Primeiro: 5 > 3 → true <br>
+            Depois: true == true → true</p>
+        </p>
+        <p><strong>Dica importante:</strong>Use sempre === e !== em vez de == e !=, para evitar surpresas com a coerção de tipo automática do JavaScript. Coerção de tipo automática (ou type coercion) em JavaScript é quando o próprio JavaScript converte automaticamente um tipo de dado em outro para tentar resolver uma operação.</p>
+        <p>Um Exemplo classico de coerção é <strong>5 == "5" resultando em TRUE</strong>. Aqui temos um número (5) sendo comparado com uma string ("5"). O JavaScript converte automaticamente a string para número antes de comparar. Por isso dá true.</p>
+        <p>Isso é coerção de tipo: ele força uma conversão pra tentar fazer a comparação funcionar.</p>
+
+        <h2></h2>
+    </main>
+</body>
+</html>
