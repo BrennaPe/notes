@@ -29,9 +29,6 @@ header{
     align-items: center;
     max-width: 800px;
     margin: auto;
-    /* border: 2px solid red; */
-    justify-content: center;
-    gap: 8px;
     
 }
 
@@ -107,6 +104,10 @@ strong{
     #container{
         flex-wrap: wrap;
         max-width: 90%;
+        margin: auto;
+        /* border: 2px solid red; */
+        justify-content: center;
+        gap: 8px;
     }
 
     main{
