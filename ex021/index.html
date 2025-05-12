@@ -35,6 +35,7 @@
             <li>=== Igual em valor e tipo</li>
             <li>!= Diferente</li>
         </ul>
+        <p>Observação.: um sinal de = não é um operador relacional. Leê-se ele como RECEBE. = é usado para atribuição de valores.</p>
         <p>Aqui estão os principais operadores relacionais em JavaScript:</p>
         <table>
             <thead>
@@ -103,10 +104,107 @@
             Depois: true == true → true</p>
         </p>
         <p><strong>Dica importante:</strong>Use sempre === e !== em vez de == e !=, para evitar surpresas com a coerção de tipo automática do JavaScript. Coerção de tipo automática (ou type coercion) em JavaScript é quando o próprio JavaScript converte automaticamente um tipo de dado em outro para tentar resolver uma operação.</p>
+        <p>O sinal de igual simples (=) é lido como “recebe”. Ele é usado para atribuir um valor a uma variável.
+        Já dois sinais de igual (==) são lidos como “igual”, e esse operador de igualdade permite conversão de tipo. Ou seja, ele compara os valores convertendo tipos diferentes quando necessário. Por exemplo, console.log(5 == "5") retorna true porque o número 5 (sem aspas) é convertido para string (“5”) (com aspas), e a comparação é feita entre dois valores iguais, mesmo que um seja um número e o outro seja uma string. Por fim, três sinais de igual (===) significam igual em todos os sentidos, incluindo o tipo. Esse operador realiza a comparação estrita, sem conversão de tipo. Ou seja, para que a comparação seja verdadeira, os valores e os tipos precisam ser idênticos. Então, console.log(5 === "5") retorna false porque 5 é um número e “5” é uma string, ou seja, tipos diferentes. Para comparações precisas, onde o tipo é importante, sempre use ===.</p>
         <p>Um Exemplo classico de coerção é <strong>5 == "5" resultando em TRUE</strong>. Aqui temos um número (5) sendo comparado com uma string ("5"). O JavaScript converte automaticamente a string para número antes de comparar. Por isso dá true.</p>
         <p>Isso é coerção de tipo: ele força uma conversão pra tentar fazer a comparação funcionar.</p>
 
-        <h2></h2>
+        <h2>Logical Operators</h2>
+        <ul>
+            <li>! Negação</li>
+            <li>&& Conjunção ou "E"</li>
+            <li>|| Disjunção ou "OU"</li>
+        </ul>
+        <h3>Ordem de Precedência</h3>
+        <p>A ordem de precedência dos operadores lógicos é a seguinte: primeiro o operador de negação (!), depois o operador de conjunção (&&) e por último o operador de disjunção (||). Ou seja, se tivermos uma expressão com os três operadores, o JavaScript vai avaliar primeiro a negação, depois a conjunção e por último a disjunção. Então, se tivermos uma expressão como !a && b || c, o JavaScript vai avaliar !a primeiro, depois b && c. Isso é importante para entender como as expressões lógicas são avaliadas e para evitar confusões na hora de escrever código. <strong>Em resumo, a ordem de execução no JS caso tenhamos mais de um operador lógico na expressão é !, && e então ||.</strong></p>
+
+        <p><strong>Operadores Lógicos</strong> são usados para combinar expressões que retornam valores booleanos (verdadeiro ou falso). Em programação, eles são usados para testar condições e tomar decisões. Os principais operadores lógicos são:</p>
+        <p><strong>AND (&&)</strong>. Este retorna verdadeiro se todas as condições forem verdadeiras. </p>
+        <p><strong>Exemplo:</strong><br>
+        idade &gt;= 15 && idade &lt;=17 Aqui estamos perguntando de a idade está entre 15 e 17 anos <br>
+        
+        salário &gt; 1500 && sexo !="M" O salário é acima de 1500 e não é homem? !="M" significa neste caso, sexo diferente de masculino.</p>
+        <p><strong>Or (||)</strong>Retorna verdadeiro se pelo menos uma das condições for verdadeira.</p>
+        <p><strong>Exemplo:</strong>
+        estado == "RJ" || estado == "SP" O estado é RJ ou SP? </p>
+        <p><strong>NOT (!)</strong>Inverte o valor booleano. Se for verdadeiro, torna-se falso, e se for falso, torna-se verdadeiro.</p>
+        <p><strong>Exemplo:</strong><br>
+        <p>Mostre se dois números são diferentes. 2!=3  ou  <br>
+        sexo !="M"<br>
+        sexo diferente de masculino</p>
+
+        <h2>Operadores Aritméticos</h2>
+        <p>Operadores aritméticos são símbolos usados para fazer contas matemáticas entre valores numéricos. Eles dizem ao computador o que fazer com os números: somar, subtrair, multiplicar, dividir, etc. Ou seja, eles são ferramentas básicas da matemática dentro da programação. Sempre que você quiser fazer um cálculo com números, você usará esses operadores.</p>
+        <p>Os principais operadores aritméticos são:</p>
+        <ul>
+            <li>+ Adição</li>
+            <li>- Subtração</li>
+            <li>* Multiplicação</li>
+            <li>/ Divisão</li>
+            <li>% Módulo (resto da divisão)</li>
+            <li>** Exponenciação</li>
+            <li>++ Incremento</li>
+            <li>-- Decremento</li>
+        </ul>
+
+              <h3>Ordem de Precedência dos Operadores Aritméticos</h3>
+            <p>
+                A ordem de precedência dos operadores aritméticos em JavaScript segue a mesma lógica da matemática:
+            </p>
+            <ol>
+                <li><strong>Parênteses <code>()</code></strong>: tudo que estiver entre parênteses é resolvido primeiro.</li>
+                <li><strong>Exponenciação <code>**</code></strong>: vem em seguida.</li>
+                <li><strong>Multiplicação <code>*</code></strong>, <strong>Divisão <code>/</code></strong> e <strong>Módulo <code>%</code></strong>: têm a mesma prioridade e são avaliados da <strong>esquerda para a direita</strong>.</li>
+                <li><strong>Soma <code>+</code></strong> e <strong>Subtração <code>-</code></strong>: também têm a mesma prioridade entre si e são avaliadas da <strong>esquerda para a direita</strong>.</li>
+            </ol> 
+
+            <!-- No HTML, a tag <code> serve para destacar trechos de código, como variáveis, comandos, operadores ou expressões que aparecem no meio de um texto. -->
+            <!-- 🧠 Por que usar <code>?
+            •	Para o leitor saber que aquilo é um pedaço de código, não texto comum.
+            •	É útil em textos técnicos, aulas, tutoriais, etc.
+            •	Pode ser estilizado com CSS (tipo fonte monoespaçada, fundo cinza, etc.). -->
+            <p>
+                <strong>Exemplo:</strong><br>
+                <code>2 + 3 * 4</code> → Primeiro multiplica: <code>3 * 4 = 12</code> → depois soma: <code>2 + 12 = 14</code>.
+            </p>
+
+            <h3>Ordem de avaliação em expressões com operadores diferentes:</h3>
+            <p>Quando uma expressão tem operadores aritméticos, relacionais e lógicos juntos, o JavaScript segue uma ordem de precedência para saber o que resolver primeiro:</p>
+            <ol>
+                <li>Aritméticos (como +, -, *, /, %) <br> 👉 Primeiro ele faz as contas.</li>
+                <li>Relacionais (como &gt;, &lt;, ==, !=, ===) <br> 👉 Depois compara os valores.</li>
+                <li>Relacionais (como &&, || e !) <br> 👉 Por último, resolve as comparações lógicas.</li>
+            </ol>   
     </main>
+    <section>
+        <h2>Tipos de Operadores em JavaScript</h2>
+
+        <h3>✅ Aritméticos:</h3>
+        <ul>
+            <li><code>+</code> (soma)</li>
+            <li><code>-</code> (subtração)</li>
+            <li><code>*</code> (multiplicação)</li>
+            <li><code>/</code> (divisão)</li>
+            <li><code>%</code> (módulo - resto da divisão)</li>
+        </ul>
+
+        <h3>✅ Relacionais (comparação):</h3>
+        <ul>
+            <li><code>&gt;</code> (maior que)</li>
+            <li><code>&lt;</code> (menor que)</li>
+            <li><code>&gt;=</code> (maior ou igual a)</li>
+            <li><code>&lt;=</code> (menor ou igual a)</li>
+            <li><code>==</code> (igual a - valor)</li>
+            <li><code>!=</code> (diferente de)</li>
+        </ul>
+
+        <h3>✅ Lógicos:</h3>
+        <ul>
+            <li><code>&&</code> (E)</li>
+            <li><code>||</code> (OU)</li>
+            <li><code>!</code> (NÃO)</li>
+        </ul>
+    </section>
+    <a href="exercicios.html">Lista de Exercícios e aplicação</a>
 </body>
 </html>
