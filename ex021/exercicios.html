@@ -3,19 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Operadores Relacionais</title>
+    <link rel="stylesheet" href="exercicios-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <main>
-        <p>Important observation before exercícios <br>
-        A tag &lt;pre&gt; (de preformatted text) serve para manter o formato original do texto dentro dela — incluindo espaços, quebras de linha e identação — exatamente como está escrito no HTML.
+        <h2>Important observation before exercícios</h2>
+        <p>
         A tag &lt;code&gt; serve para indicar que um determinado trecho do texto é código — como comandos, variáveis, operadores, funções, etc.Ela é usada para dar significado semântico ao conteúdo (ou seja, dizer ao navegador, leitores de tela e buscadores que aquele texto é código), além de aplicar uma fonte monoespaçada (tipo de letra onde cada caractere ocupa o mesmo espaço, como em editores de código).</p>
 
-        <p>Exercício 1: <br>
-        <pre><code>
+        <h2>Exercícios op aritméticos: </h2>
+        <p>
+            let n = 3 <br>
+            n =  n + 4 (n deixa de valer  3 e passa a valer 7 isso é auto atribuição) <br>
+            n = n - 5 (o n que estava valendo 7 deixa de valer 7 e passa a valer 2 ... também temos a short version de auto atribuição que é da seguinte forma) <br>
+            n*=4 (o n que tava valendo 2 passa a valer 8) <br>
+            n/=2 (n passa a valer 4) <br>
 
-        </code></pre>
+            let a = 5+3 (result 8) <br>
+            let b = a%5 (result 3) <br>
+            let c = 5*b**2 (result 45) <br>
+            let d = 10-a/2 (result 6) <br>
+            let e = 6*2/d (result 2) <br>
+            let f = b%e+4/e (result 3) <br> 
+            </p>
+        
+        <H2>Operadores de incremento:</H2>
+               <p> let x = 5 <br>
+                x = x + 1 (result 6) <br>
+                x+=1 (result 6) <br>
+                x++ (result 6) <br>
+                Esses três exemplos são uma demonstração de uma mesma conta porém de três formas diferentes de faze-las <br>
 
+                let x = 5 <br>
+                x = x-1 (result 4) <br>
+                x-=1 (result 4) <br>
+                x-- (result 4) <br>
+                </p>
+
+        <h2>Formule as seguintes perguntas em forma de código:</h2>
+
+        <p>“O usuário tem permissão se for ADMIN ou MODERADOR.” ➡ Como ficaria a condição em JS? <br>
+            
+        user === "ADMIN" || user === "MODERADOR" <br>
+        
+         <p>
+            “Para entrar no evento, a pessoa precisa ter mais de 18 anos e ter ingresso.” <br>
+
+            idade >= 18 && ingresso === "sim" <br>
+            Dica: sempre use === ao invés de ==, para garantir que o tipo também seja igual.
+         </p>
+
+         <p>
+            “Verifique se o aluno passou. A nota precisa ser maior ou igual a 6.” <br>
+            nota >= 6
+         </p>
+         <p>
+            “Mostre se uma pessoa tem entre 18 e 59 anos " <br>
+            idade &gt;= 18 && idade &lt;= 59
+         </p>
+
+         <p>
+            <span>01.</span>	“Para poder votar, a pessoa precisa ter 16 anos ou mais.” <br>
+
+            voto >= 16
+         </p>
+
+         <p>
+            <span>02.</span>	“Verifique se o número é par.” <br>
+            
+            numero % 2 === 0
+        </p>
+
+        <p>
+            <span>03.</span>	“Mostre se um produto está fora do orçamento. O preço precisa ser maior que 100.” <br>
+
+            preco > 100
+        </p>
+
+        <p>
+            <span>04.</span>	“Verifique se uma pessoa tem exatamente 18 anos.”<br>
+
+            idade === 18
+        </p>
+        <p>
+            <span>05.</span>	“A entrada só é permitida para menores de 12 anos ou maiores de 60.<br>
+
+            idade &lt; 12 || idade > 60
+        </p>
+        <p>
+            <span>06.</span>	“Confirme se a senha digitada é igual à senha cadastrada.”<br>
+
+            SenhaDigitada === SenhaCadastrada
+        </p>
+        <p>
+            <span>07.</span>	“A promoção é válida apenas se o produto tiver estoque e o cliente for premium.”<br>
+
+            estoque > 0 && cliente === "premium"
+        </p>
+        <p>
+           	<span>08.</span>	“Verifique se o número está entre 1 e 100.” <br>
+
+            numero >= 1 && numero &lt;= 100
+        </p>
+        <p>
+            <span>09.</span>	“Mostre se um aluno foi reprovado com nota menor que 5.”<br>
+
+            nota &lt; 5? "reprovado" : "aprovado"
+        </p>
+        <p>
+            <span>10.</span>	“Para acessar o conteúdo, o usuário deve estar logado e ter assinatura ativa.”<br>
+
+            usuarioLogado === true && assinaturaAtiva === true <br>
+
+            (ou, se forem strings: status === "logado" && assinatura === "ativa") <br> Explicação: É necessário verificar duas variáveis diferentes: uma para o login e outra para a assinatura.
+        </p>
+        <p>
+            <span>11.</span>	“Mostre se a temperatura está abaixo de 0 graus.”<br>
+
+            temperatura &lt; 0
+        </p>
+        <p>
+            <span>12.</span>	“Um triângulo é equilátero quando os três lados são iguais.”<br>
+
+            a === b && b === c
+        </p>
+        <p>
+          	<span>13.</span>	“Mostre se o número não é múltiplo de 3.”  <br>
+
+            numero % 3 !== 0 <br>
+
+        </p>
+        <p>
+         	<span>14.</span>	“Verifique se duas variáveis são diferentes.”   <br>
+
+            a !== b <br>
+            !== compara valor e tipo, e retorna true se forem diferentes.
+        </p>
+        <p>
+            <span>15.</span>	“A pessoa pode dirigir se tiver 18 anos ou mais e for habilitada.”<br>
+
+            idade >= 18 && habilitacao === "sim"
+        </p>
+        <p>
+         	<span>16.</span>	“Verifique se a nota está entre 7 e 10 (inclusive).”   <br>
+
+            nota >= 7 && nota &lt;= 10
+        </p>
+        <p>
+        	<span>17.</span>	“A entrega é grátis apenas se o valor da compra for maior ou igual a 150.”    
+            <br>
+            entregaGratis >= 150
+        </p>
+        <p>
+         	<span>18.</span>	“O botão deve estar desabilitado se o campo estiver vazio.”   <br>
+           campo === "" ? botao = "desabilitado" : botao = "habilitado"
+        </p>
+        <p>
+        	<span>19.</span>	“Verifique se a pessoa não tem idade para entrar (menor de 18).” <br>
+
+            idade &lt; 18
+        </p>
+        <p>
+        	<span>20.</span>	“Confirme se o número é positivo e menor que 10.”    <br>
+
+            numero > 0 && numero &lt; 10
+        </p>
+        <p>
+        	<span>21.</span>	“Mostre se um funcionário tem entre 1 e 5 anos de empresa.”<br>
+            tempoServico >= 1 && tempoServico &lt;= 5
+        </p>
+        <p>
+           	<span>22.</span>	“A pessoa não pode estar ausente e nem com status inativo.”<br>
+            presenca !== "ausente" && status !== "inativo"
+        </p>
+        <p>
+            <span>23.</span>	“Verifique se dois produtos têm o mesmo preço.”<br>
+            produto1 === produto2
+        </p>
+        <p>
+         	<span>24.</span>	“A promoção só vale se hoje for sexta-feira.”   <br>
+            promocao-aply === "sexta-feira"
+        </p>
+        <p>
+         	<span>25.</span>	“Verifique se um número é divisível por 2 e por 5 ao mesmo tempo.”   <br>
+            numero % 2 === 0 && numero % 5 === 0
+        </p>
+        <p>
+         	<span>26.</span>Se a idade for maior ou igual a 18, mostre "Maior de idade", senão "Menor de idade". <br>
+            idade >= 18 ? "Maior de idade" : "Menor de idade"
+        </p>
+        <p>
+         	<span>27.</span>Se a nota for maior ou igual a 7, mostre "Aprovado", senão "Reprovado". <br>
+            nota >=7 ? "Aprovado" : "Reprovado"
+        </p>
+        <p>
+         	<span>28.</span>Se o número for par, mostre "Par", senão "Ímpar". <br>
+            numero % 2 === 0 ? "Par" : "Ímpar"
+        </p>
+        <p>
+         	<span>29.</span>Se o valor da compra for maior ou igual a 100, aplique frete grátis ("Frete grátis"), senão cobre R$20 ("Frete de R$20"). <br>
+            valor >= 100 ? "Frete grátis" : "Frete de R$20"
+        </p>
+        <p>
+         	<span>30.</span>Se a senha for igual a "1234", mostre "Acesso permitido", senão "Senha incorreta" <br>
+            SENHA === 1234 ? "Acesso permitido" : "Senha incorreta"
+        </p>
     </main>
 </body>
 </html>

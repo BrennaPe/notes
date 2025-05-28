@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 0%, 94%);
+    line-height: 2rem;
+    background: url(bg-jsexercises.png) no-repeat center center fixed;
+    background-size: cover;
+    background-color: black;
+    
+}
+
+main{
+    border: 2px solid rgb(135, 202, 1);
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.618);
+}
+
+span{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.755);
+    padding: 0.2rem;
+    border-radius: 100%;
+}
