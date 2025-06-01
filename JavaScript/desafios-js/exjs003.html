@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando</title>
+</head>
+<body>
+    <h1>Some</h1>
+    <input type="number" id="txtnumber1" placeholder="Digite o primeiro número">
+    <span>+</span>
+    <input type="number" id="txtnumber2" placeholder="Digite o segundo número">
+    <button id="btnSomar" onclick="soma()">Somar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function soma() {
+            let txtn1 = document.getElementById ('txtnumber1');
+            let txtn2 = document.getElementById ('txtnumber2');
+            let result = document.getElementById ('resultado'); 
+            let n1 = Number(txtn1.value);
+            let n2 = Number(txtn2.value);
+            let s = n1 + n2;
+            result.innerHTML = `O resultado da soma é ${s}`;
+        }
+    </script>
+</body>
+</html>
