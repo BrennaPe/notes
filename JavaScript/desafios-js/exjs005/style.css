@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: #436dd8;
+}
+
+h1{
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+section{
+    margin: auto;
+    background-color: #fff;
+    width: 500px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.509);
+}
+
+#msg{
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#foto{
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+}
