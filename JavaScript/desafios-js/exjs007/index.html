@@ -1,1 +1,41 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Qual a idade do seu carro?</h1>
+    </header>
+    <main>
+        <p>
+            <label for="anoCarro">Ano do carro</label>
+            <input type="number" name="anoCarro" id="anoCarro" value="1920" minlength="4">
+        </p>
+        <p>
+            Type:
+            <input type="radio" name="carType" id="sedan" value="sedan" checked> Sedan
+
+            <input type="radio" name="carType" id="suv" value="suv"> SUV
+
+            <input type="radio" name="carType" id="hatchback" value="hatchback"> Hatchback
+
+            <input type="radio" name="carType" id="micro" value="micro"> Micro
+
+        </p>
+
+
+        <input type="button" value="Verificar" onclick="verificar()">
+
+        <div id="resultado">
+            Preencha os dados acima para ver o resultado
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
