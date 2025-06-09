@@ -12,30 +12,28 @@
     </header>
     <section>
         <div id="container">
-            <form action="">
-                <div id="ano-nasc">
-                    <label for="nasc">Ano de Nascimento
+               <p>
+                   Ano de Nascimento
                     </label>
-                    <input type="date" name="date" id="idate">
-                </div>
-                <div id="genero">
-                    <label for="genero">Sexo:
-                    </label>
-
-                    <input type="radio" name="genero" id="imasc" value="Masculino">
-                    <label for="imasc">Masculino</label>
-
-                    <input type="radio" name="genero" id="ifem" value="Feminino">
-                    <label for="ifem">Feminino</label>
-                </div>
+                    <input type="number" name="date" id="idate" min="1900" max="2025" value="1950">
+               </p>
                 
-                <div id="imagem">
-                    <img id="foto" src="assets/elderly-w.png" alt="">
-                </div>
+                
+                <p>
+                        Sexo:
+                        <input type="radio" name="genero" id="imasc" value="Masculino">
+                        <label for="imasc">Masculino</label>
+                    
 
-                <p id="resultado">Preencha os dados a cima para ver o resultado</p>
+                    <input type="radio" name="genero" id="ifem" value="Feminino" checked>
+                    <label for="ifem" >Feminino</label>
+                </p>
+                
+                <input type="button" id="button" value="Verificar" onclick="verificar()">
 
-            </form>
+            <div id="resultado">
+                Preencha para ver o resultado
+            </div>
         </div>
     </section>
 
