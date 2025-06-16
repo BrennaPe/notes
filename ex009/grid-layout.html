@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>Grid Layout</h1>
+        <h2>O que é um Grid Layout?</h2>
+        <p>O Grid Layout é uma forma de organizar os elementos na tela como se fosse uma tabela invisível, com linhas e colunas.
+        <br>Você escolhe quantas colunas e quantas linhas o seu layout vai ter, e onde cada item vai ficar.</p>
+        <p>Quando configuramos um elemento pai com display: grid, ele se torna um container de grade, e os elementos filhos passam a ser organizados de acordo com essa grade. <br>
+        Ao usar apenas display: grid, sem definir colunas com grid-template-columns, o Grid cria, por padrão, uma única coluna. Os itens filhos são empilhados verticalmente, um embaixo do outro. <br>
+        Quando você usa grid-template-columns ou grid-template-rows, cada valor que você coloca representa uma coluna ou uma linha.
+        </p>
+        <details>
+            <summary>Infográfico</summary>
+            <img src="container.png" alt="" srcset="">
+            <img src="container-itens.png" alt="">
+            <img src="grid-columns.png" alt="">
+            <img src="grid-gap.png" alt="" srcset="">
+        </details>
+        <h2>Como você define o tamanho?</h2>
+        <p>Você pode usar diferentes unidades: fr → Fração do espaço disponível, px → Tamanho fixo em pixels, % → Porcentagem do espaço do container pai e auto → Ajusta de acordo com o conteúdo</p>
+        <p>Obs.: O container pai vai crescer automaticamente conforme o conteúdo interno e o que você definiu nas linhas e colunas. Se você usar fr, o grid divide o espaço que tem disponível. Se você usar px, o tamanho será fixo, e o container pode ficar maior se os itens não couberem.</p>
+
+        <h2>O que é gap no CSS Grid?</h2>
+        <p>gap é o espaço entre os itens do grid. É como o “vão” entre os tijolos em uma parede. Ele não afeta o tamanho dos itens, apenas a distância entre eles.</p>
+
+        <details>
+            <summary>Tipos de Gap</summary>
+            <ul>
+                <li>gap: define ao mesmo tempo o espaço entre linhas e colunas</li>
+                <li>row-gap: define apenas o espaço entre as linhas</li>
+                <li>column-gap: define apenas o espaço entre as colunas</li>
+            </ul>
+        </details>
+    </main>
+</body>
+</html>

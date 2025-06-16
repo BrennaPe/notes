@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;}
+
+.container{
+    border: 2px solid black;
+    height: 250px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+}
+
+.item{
+    border: 1px solid red;
+    padding: 5px;
+}
