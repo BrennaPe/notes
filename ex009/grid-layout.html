@@ -18,10 +18,10 @@
         </p>
         <details>
             <summary>Infográfico</summary>
-            <img src="container.png" alt="" srcset="">
-            <img src="container-itens.png" alt="">
-            <img src="grid-columns.png" alt="">
-            <img src="grid-gap.png" alt="" srcset="">
+            <img src="assets/container.png" alt="" srcset="">
+            <img src="assets/container-itens.png" alt="">
+            <img src="assets/grid-columns.png" alt="">
+
         </details>
         <h2>Como você define o tamanho?</h2>
         <p>Você pode usar diferentes unidades: fr → Fração do espaço disponível, px → Tamanho fixo em pixels, % → Porcentagem do espaço do container pai e auto → Ajusta de acordo com o conteúdo</p>
@@ -36,7 +36,37 @@
                 <li>gap: define ao mesmo tempo o espaço entre linhas e colunas</li>
                 <li>row-gap: define apenas o espaço entre as linhas</li>
                 <li>column-gap: define apenas o espaço entre as colunas</li>
+                <img src="assets/grid-gap.png" alt="" srcset="">
             </ul>
+        </details>
+
+        <details>
+            <summary>
+                Align-items vs Justify-items
+            </summary>
+            <p>
+                <strong>align</strong> trabalha no eixo vertical (colunas, de cima para baixo) enquanto <strong>justify</strong> trabalha no eixo horizontal (linhas, da esquerda para a direita). Essas duas propriedades são usadas dentro do grid (container pai), controlando como cada item filho se posiciona dentro da sua célula.
+            </p>
+            <h2>Align itens</h2>
+            <p>align-items / justify-items → Alinha os itens individuais</p>
+            <img src="assets/align-items-stretch.png" alt="">
+            <img src="assets/align-itens-start.png" alt="">
+            <img src="assets/align-itens-center.png" alt="">
+            <img src="assets/align-itens-end.png" alt="">
+
+            <h2>Justify itens</h2>
+            <img src="assets/justfy-itens-start.png" alt="">
+            <img src="assets/justfy-itens-center.png" alt="">
+            <img src="assets/justfy-itens-end.png" alt="">
+        </details>
+        <details>
+            <summary>Align-content vs Justify-content</summary>
+            <p>Essas duas propriedades servem para alinhar o conjunto completo de linhas ou colunas dentro do container. <br>
+            <strong>Mas atenção:</strong>
+            Para que elas funcionem corretamente, o container pai precisa ter um tamanho definido (largura, altura, ou ambos). Isso porque elas só atuam quando sobra espaço dentro do container.</p>
+
+            <h2>Align content</h2>
+            <img src="" alt="">
         </details>
     </main>
 </body>

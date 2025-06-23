@@ -1,0 +1,11 @@
+.container{
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 100px 100px 100px;
+}
+
+.item{
+    border: 1px dashed rgb(207, 49, 75);
+    background-color: antiquewhite;
+}
