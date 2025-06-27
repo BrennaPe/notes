@@ -8,7 +8,7 @@
 <body>
     <header></header>
     <main>
-        <h1>Grid Layout</h1>
+        <h1>Grid Layout - Propriedades de container</h1>
         <h2>O que é um Grid Layout?</h2>
         <p>O Grid Layout é uma forma de organizar os elementos na tela como se fosse uma tabela invisível, com linhas e colunas.
         <br>Você escolhe quantas colunas e quantas linhas o seu layout vai ter, e onde cada item vai ficar.</p>
@@ -18,11 +18,12 @@
         </p>
         <details>
             <summary>Infográfico</summary>
-            <img src="assets/container.png" alt="" srcset="">
-            <img src="assets/container-itens.png" alt="">
-            <img src="assets/grid-columns.png" alt="">
+            <img src="assets/container.png" alt="" srcset=""> <br>
+            <img src="assets/container-itens.png" alt=""> <br>
+            <img src="assets/grid-columns.png" alt=""> <br>
 
         </details>
+        <h1>Propriedades do container para Grids</h1>
         <h2>Como você define o tamanho?</h2>
         <p>Você pode usar diferentes unidades: fr → Fração do espaço disponível, px → Tamanho fixo em pixels, % → Porcentagem do espaço do container pai e auto → Ajusta de acordo com o conteúdo</p>
         <p>Obs.: O container pai vai crescer automaticamente conforme o conteúdo interno e o que você definiu nas linhas e colunas. Se você usar fr, o grid divide o espaço que tem disponível. Se você usar px, o tamanho será fixo, e o container pode ficar maior se os itens não couberem.</p>
@@ -49,15 +50,15 @@
             </p>
             <h2>Align itens</h2>
             <p>align-items / justify-items → Alinha os itens individuais</p>
-            <img src="assets/align-items-stretch.png" alt="">
-            <img src="assets/align-itens-start.png" alt="">
-            <img src="assets/align-itens-center.png" alt="">
+            <img src="assets/align-items-stretch.png" alt=""> <br>
+            <img src="assets/align-itens-start.png" alt=""> <br>
+            <img src="assets/align-itens-center.png" alt=""> <br>
             <img src="assets/align-itens-end.png" alt="">
 
             <h2>Justify itens</h2>
-            <img src="assets/justfy-itens-start.png" alt="">
-            <img src="assets/justfy-itens-center.png" alt="">
-            <img src="assets/justfy-itens-end.png" alt="">
+            <img src="assets/justfy-itens-start.png" alt=""> <br>
+            <img src="assets/justfy-itens-center.png" alt=""> <br>
+            <img src="assets/justfy-itens-end.png" alt=""> <br>
         </details>
         <details>
             <summary>Align-content vs Justify-content</summary>
@@ -66,8 +67,85 @@
             Para que elas funcionem corretamente, o container pai precisa ter um tamanho definido (largura, altura, ou ambos). Isso porque elas só atuam quando sobra espaço dentro do container.</p>
 
             <h2>Align content</h2>
-            <img src="" alt="">
+            <img src="assets/align-content-start.png" alt=""> <br>
+            <img src="assets/align-content-end.png" alt=""> <br>
+            <img src="assets/align-content-center.png" alt=""> <br>
+            <img src="assets/align-content-spacebetween.png" alt=""> <br>
+            <img src="assets/align-content-spaceevenly.png" alt=""> <br>
+            <img src="assets/align-content-spacearound.png" alt=""> <br>
+            <img src="assets/align-content-stretch.png" alt=""> <br>
+
+            <h2>Justify content</h2>
+
+            <img src="assets/justify-content-center.png" alt=""> <br>
+            <img src="assets/justify-content-end.png" alt=""> <br>
+            <img src="assets/justify-content-spacebetween.png" alt=""> <br>
+            <img src="assets/justify-content-spaceevenly.png" alt=""> <br>
+            <img src="assets/justify-content-spacearound.png" alt=""> <br>
+            <img src="assets/justify-content-stretch.png" alt=""> <br>
+
+            <h2>Grid layout simplificado com função</h2>
+            <img src="assets/simplificado.png" alt=""> <br>
+            <img src="assets/mais-simplificado.png" alt=""> <br>
+
+            <h2>Usando unidade fracional</h2>
+            <p>Use fr sempre que você quiser um layout que se adapte automaticamente ao tamanho do container, sem depender do conteúdo ou de tamanhos fixos. <br>
+            Reserve px ou auto para casos específicos, como uma barra lateral fixa ou um botão que deve se ajustar ao texto.</p>
+            <img src="assets/fracao.png" alt=""> <br>
+            <img src="assets/fracao2.png" alt=""> <br>
+            <h3>grid medidas mistas</h3>
+
+            <p>Neste ultimo exemplo temos o primeiro item com uma largura fixa de 100px, o segundo item com 20% de 1500px que é 300px  (esses 1500px é o tamanho do container pai e perceba que é 20% do valor total e não doque sobrou) e as duas frações se baseia no valor que sobrou após as duas primeiras colunas ocuparem o espaço delas. Ou seja o container pai tem 1500px, e utilizamos 400px desses 1500 logo só temos 1100px para fracionar</p>
+              <img src="assets/medidasMistas.png" alt=""> <br>
         </details>
+
+        <a href="exercicios/exercicio-1.html" target="_blank"> exemplos</a>
+
+        <h2>grid-auto-rows</h2>
+        <p>Grid-auto-rows define a altura padrão das linhas que o grid cria automaticamente, ou seja, linhas que você não declarou manualmente com grid-template-rows. Se você não usar grid-auto-rows, essas linhas extras vão ter uma altura automática (baseada no conteúdo) — o que pode deixar o layout desorganizado ou inconsistente.</p>
+        <a href="exercicios/auto-row.html">Exemplo: grid-auto-rows</a>
+
+        <h2>frid-auto-flow</h2>
+        <p>grid-auto-flow controla a direção em que os itens são inseridos automaticamente no grid, quando você não especifica a posição deles.</p>
+        <p>Row (padrão): os itens são colocados linha por linha (da esquerda para a direita, depois para a próxima linha). Column: os itens são colocados coluna por coluna (de cima para baixo, depois para a próxima coluna) os itens serão preenchidos de cima para baixo, criando novas colunas conforme necessário. E aqui também podemos utilizar de um artificio para padronizar o tamanho de novos itens inseridos com o grid-auto-column</p>
+
+        <h1>Propriedades de Itens no Grid layout</h1>
+
+        <h2>Definindo grid Areas</h2>
+        <p>
+        Para definir a área que um item deve ocupar no grid, você precisa informar onde ele começa e onde ele termina.  
+        Em outras palavras, é necessário saber:
+        <strong>a linha de início, a linha de fim, a coluna de início e a coluna de fim</strong>.
+        </p>
+        <p>
+        Veja na imagem a seguir como essas posições determinam exatamente o espaço ocupado por um item dentro do grid.
+        </p>
+        <img src="assets/grid-areas.png" alt="" srcset="">
+        <p>A seguir config de container e de itens para o grid acima</p>
+        <img src="assets/grid-areasConfig.png" alt="" srcset="">
+         <p>
+        Uma forma de simplificar a escrita das posições no grid é usar as propriedades <code>grid-row</code> e <code>grid-column</code>, em vez de escrever separadamente <code>grid-row-start</code>, <code>grid-row-end</code>, <code>grid-column-start</code> e <code>grid-column-end</code>.
+        </p>
+        <p>
+        Com <code>grid-row</code> e <code>grid-column</code>, você pode indicar o início e o fim em uma única linha.  
+        Veja na imagem a seguir como essa simplificação funciona na prática.
+        </p>
+        <img src="assets/areaSimplificado.png" alt="" srcset="">
+        <p>
+        E se você quiser simplificar ainda mais, pode usar a propriedade <code>grid-area</code>.
+        </p>
+        <p>
+        Com ela, você define a posição do item no grid em uma única linha, seguindo esta ordem:
+        <strong>linha de início, coluna de início, linha de fim, coluna de fim</strong>.
+        </p>
+        <p>
+        Ou seja, a sintaxe completa é:
+        <code>grid-area: row-start / column-start / row-end / column-end;</code>
+        </p>
+        <p>
+        Veja na imagem a seguir como essa forma compacta ajuda a organizar o posicionamento de maneira mais rápida.
+        </p>
+        <img src="assets/grid-area-simpl.png" alt="" srcset="">
     </main>
 </body>
 </html>

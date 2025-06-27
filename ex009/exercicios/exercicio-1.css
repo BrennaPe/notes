@@ -1,11 +1,206 @@
+.container, .container1, .container2, .container3, .container4, .container5, .container6, .container7, .container8{
+    margin-bottom: 20px;
+}
+
 .container{
     border: 2px solid black;
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: 100px 100px 100px;
+    grid-template-rows: 50px 50px 50px;
+    gap: 10px;
 }
 
 .item{
     border: 1px dashed rgb(207, 49, 75);
     background-color: antiquewhite;
 }
+
+.container1{
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 50px 50px;
+    align-items: start;
+}
+
+/* Perceba que neste caso você não tem você um tamanho para o container pai e sim o tamanho imaginário de grade em rows aqui de 50px e o seu item esta alinhado ao topo desta box imaginária  */
+
+.item1{
+    border: 1px dashed rgb(207, 49, 75);
+    background-color: rgb(202, 153, 90);
+}
+
+.container2{
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 50px 50px;
+    align-items: center;
+}
+
+/* Perceba que neste caso você não tem você um tamanho para o container pai e sim o tamanho imaginário de grade em rows aqui de 50px e o seu item esta alinhado ao centro desta box imaginária  */
+
+.item2{
+    border: 1px dashed rgb(79, 7, 19);
+    background-color: rgb(239, 230, 67);
+}
+
+.container3{
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 50px 50px;
+    align-items: flex-end;
+}
+
+.item3{
+    border: 1px dashed rgb(79, 7, 19);
+    background-color: rgb(32, 180, 165);
+}
+.container4{
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 50px 50px;
+    align-items: stretch;
+}
+
+.item4{
+    border: 1px dashed rgb(79, 7, 19);
+    background-color: rgb(203, 126, 186);
+}
+.container5{
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 50px 50px;
+    align-items: stretch;
+    justify-items: start;
+}
+
+.item5{
+    border: 1px dashed rgb(79, 7, 19);
+    background-color: rgb(136, 223, 85);
+}
+
+.container6{
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 50px 50px;
+    align-items: stretch;
+    justify-items: end;
+}
+
+.item6{
+    border: 1px dashed rgb(79, 7, 19);
+    background-color: rgb(223, 85, 108);
+}
+.container7{
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 50px 50px;
+    align-items: stretch;
+    justify-items: center;
+}
+
+.item7{
+    border: 1px dashed rgb(79, 7, 19);
+    background-color: rgb(105, 118, 170);
+}
+.container8{
+    border: 2px solid black;
+    display: grid;
+    height: 250px;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 60px 60px 60px;
+    justify-content: start;
+}
+
+.item8{
+    border: 1px dashed rgb(79, 7, 19);
+    background-color: rgb(221, 224, 132);
+}
+.container9{
+    border: 2px solid black;
+    display: grid;
+    height: 250px;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 60px 60px 60px;
+    justify-content: center;
+}
+
+.item9{
+    border: 1px dashed rgb(79, 7, 19);
+    background-color: rgb(171, 174, 67);
+}
+.container10{
+    border: 2px solid black;
+    display: grid;
+    height: 250px;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 60px 60px 60px;
+    justify-content: end;
+}
+
+.item10{
+    border: 1px dashed rgb(79, 7, 19);
+    background-color: rgb(92, 95, 9);
+    color: white;
+}
+.container11{
+    border: 2px solid black;
+    display: grid;
+    height: 250px;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 60px 60px 60px;
+    justify-content: space-between;
+}
+
+.item11{
+    border: 1px dashed rgb(79, 7, 19);
+    background-color: rgb(65, 138, 38);
+    color: white;
+}
+.container12{
+    border: 2px solid black;
+    display: grid;
+    height: 250px;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 60px 60px 60px;
+    justify-content: space-around;
+}
+
+.item12{
+    border: 1px dashed rgb(79, 7, 19);
+    background-color: rgb(19, 65, 2);
+    color: white;
+}
+.container13{
+    border: 2px solid black;
+    display: grid;
+    height: 250px;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 60px 60px 60px;
+    justify-content: space-evenly;
+}
+
+.item13{
+    border: 1px dashed rgb(79, 7, 19);
+    background-color: rgb(122, 217, 6);
+}
+.container14{
+    border: 2px solid black;
+    display: grid;
+    height: 250px;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 60px 60px 60px;
+    justify-content: stretch;
+}
+
+.item14{
+    border: 1px dashed rgb(79, 7, 19);
+    background-color: rgb(122, 217, 6);
+}
+

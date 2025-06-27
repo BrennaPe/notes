@@ -1,0 +1,25 @@
+.container{
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 70px 70px 70px;
+    gap: 10px;
+}
+
+.item{
+    border: 1px dashed rgb(207, 49, 75);
+    background-color: antiquewhite;}
+
+.container1{
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 70px 70px 70px;
+    gap: 10px;
+    grid-auto-rows: 70px;
+}
+
+.item1{
+    border: 1px dashed rgb(207, 49, 75);
+    background-color: antiquewhite;
+}
