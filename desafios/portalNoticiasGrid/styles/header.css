@@ -1,0 +1,37 @@
+#primary{
+    padding-block: 20px;
+    /* border: 2px solid red; */
+
+    
+    
+    /* NESTING */
+
+    div{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* div:nth-child(1){
+        border: 2px solid rgb(229, 244, 241);
+    } */
+
+    div:nth-child(2){
+        justify-self: center;
+        /* border: 2px solid rgb(23, 172, 35); */
+    }
+
+    div:nth-child(3){
+        justify-self: flex-end;
+    /* border: 2px solid rgb(49, 147, 122); */
+
+    }
+}
+
+#secondary{
+    border: 0.5px solid var(--brand-color-light);
+    padding-block: 14px;
+    justify-content: space-between;
+    font-size: 14px;
+    padding-inline: 32px;
+}
