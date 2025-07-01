@@ -42,14 +42,17 @@ h1, h2, h3{
     font: inherit;
 }
 
-.grid{
-    display: grid;
-    grid-auto-flow: column;
-}
-
 .container{
     max-width: 1280px;
     padding-inline: 32px;
     margin-inline: auto;
 }
 
+img{
+    max-width: 100%; 
+    /* Este max-width vai respeitar o tamanho que pre determinei deste container */
+}
+
+main{
+    margin-top: 40px;
+}

@@ -29,7 +29,8 @@
 }
 
 #secondary{
-    border: 0.5px solid var(--brand-color-light);
+    border-top: 0.5px solid var(--brand-color-light);
+    border-bottom: 0.5px solid var(--brand-color-light);
     padding-block: 14px;
     justify-content: space-between;
     font-size: 14px;
