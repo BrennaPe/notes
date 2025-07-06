@@ -16,3 +16,36 @@
 .gap-16{
  gap: 16px;
 }
+
+.text-2xl{
+    font: var(-h1);
+}
+
+.text-xl{
+    font: var(--h2);
+}
+
+.text-lg{
+    font: var(--h3);
+}
+
+.text-sm{
+    font: var(--small);
+}
+
+.content-tag {
+    background-color: var(--brand-color-light);
+    display: inline-block;
+    /* 
+      O display: inline-block faz com que o elemento se comporte como um bloco,
+      permitindo definir largura, altura, margens e paddings, 
+      mas sem ocupar toda a largura disponível como um block comum.
+      Assim, ele fica na mesma linha de outros elementos inline, 
+      mas pode ser estilizado como um bloco.
+    */
+    padding: 8px;
+    border-radius: 4px;
+    font: 600 11px/1.2 var(--font-family);
+    letter-spacing: 0.06em;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.736);
+}

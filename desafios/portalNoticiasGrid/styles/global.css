@@ -21,6 +21,7 @@
     --h3: 800 14px/140% var(--font-family);
     --span: 600 14px/145% var(--font-family);
     --paragraph: 300 14px/160% var(--font-family);
+    --small: 200 12px/150% var(--font-family);
 }
 
 body{

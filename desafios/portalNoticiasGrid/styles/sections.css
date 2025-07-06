@@ -1,5 +1,5 @@
 #futured{
-
+    border: 2px solid red;
     img{
         height: 100%;
         object-fit: cover;
@@ -12,7 +12,6 @@
     overflow: hidden;
     /* o overflow hidden vai esconder tudo que transbordar o tamanho da caixa original */
     border-radius: 4px;
-
     
 }
 
@@ -27,5 +26,24 @@
     /* esta função top define quantos % você quer a sua caixa away from the top */
     background: 020617;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(2, 6, 23, 1) 100%);
+}
 
+.card figcaption{
+    position: absolute;
+    bottom: 0%;
+    /* `bottom: 0;` controls vertical positioning of the element (how far it is from the bottom of its positioned ancestor). */
+    padding: 24px;
+
+    h2{
+    margin-top: 8px;
+    line-height: 22px;
+    font-weight: 500;
+    }
+
+    &:has(.text-sm){
+        padding: 12px;
+    }
+    /* figcaption tem la dentro uma class text-sm? se tiver aplique (...) */
+
+    /* :has(.text-sm)` faz o elemento pai (ex: `figcaption`) receber o estilo, se ele tiver um filho/descendente `.text-sm`. O `:has()` permite selecionar um elemento com base em seus filhos ou descendentes. `:has(.text-sm)`: É um pseudo-classe de CSS chamada `:has()`, que seleciona elementos que contêm um elemento filho (ou descendente) que corresponde ao seletor dentro dos parênteses. Neste caso, um elemento com a classe `.text-sm`. */
 }
