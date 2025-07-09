@@ -9,20 +9,46 @@
 <body>
     <header>
         <nav>
-            <div id="menu">
+            <div id="menu-burguer" onclick="clickMenu()">
                 <img src="assets/icons/List.svg" alt="">
                 <span>Menu</span>
+            <ul id="menu-list-burguer">
+                <li>
+                    <a href="#" target="_blank">Inteligência Artificial</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">Blockchain</a>
+                </li>
+
+                <li>
+                    <a href="#" target="_blank">Hologramas</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">Internet</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">Vestíveis</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">Realidade Aumentada</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">VR</a>
+                </li>
+        </ul>
+        
             </div>
             <div id="logo">
                 <img src="assets/TechNews.svg" alt="TechNews Logo">
             </div>
+
             <div id="search">
                 <span>Buscar</span>
                 <img src="assets/icons/MagnifyingGlass.svg" alt="">
             </div>
         </nav>
 
-        <ul>
+        <ul id="menu-list">
             <li>
                 <a href="#" target="_blank">Inteligência Artificial</a>
             </li>
@@ -242,5 +268,17 @@
             </aside>
         </div>
     </main>
+
+    <script>
+        function clickMenu() {
+            let menu = document.getElementById("menu-list-burguer");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            } 
+            // Traduzindo o Js é "Se o menu-list-burguer estiver visível (com o display block), esconda-o (com o display none); caso contrário, mostre-o."
+        }
+    </script>
 </body>
 </html>

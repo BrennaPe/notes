@@ -50,7 +50,7 @@ header nav{
         font-weight: 600;
     }
 
-    #menu{
+    #menu-burguer{
         display: flex;
         align-items: center;
         gap: 8px;
@@ -70,7 +70,31 @@ header nav{
     }
 }
 
-header ul{
+header #menu-list-burguer{
+    display: none;
+    list-style: none;
+    position: absolute;
+    z-index: 1000;
+    background-color: var(--brand-color-light);
+    padding: 12px 12px 12px 0px;
+    border-radius: 8px;
+    top: 10px;
+    left: 320px;
+}
+
+header #menu-list-burguer li{
+    padding: 8px;
+    border-bottom: 1px solid #dee4f400;
+    color: var(--text-color-primary);
+}
+
+header #menu-list-burguer a{
+    color: var(--text-color-primary);
+    text-decoration: none;
+    font: var(--h2);
+}
+
+header #menu-list{
     display: flex;
     list-style: none;
     justify-content: space-between;
