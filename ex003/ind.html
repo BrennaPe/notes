@@ -28,6 +28,7 @@
             <div class="box1"></div>
             <div class="preenchimento-top-bottom"></div>
             <p>The element is positioned according to the <strong>normal flow</strong> of the document, and then offset relative to itself based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements. </p>
+            <p>O elemento continua no fluxo normal da página. Mas agora você pode mover ele com top, left, right, bottom. Ele se move em relação à sua posição original. Não afeta os irmãos dele no layout.</p>
             <p>A propriedade position com valor relative mantém o elemento no <strong>fluxo normal da página</strong>, mas permite deslocá-lo em relação à sua posição original. Ou seja, o elemento permanece no local onde estaria <span>(virtualmente) </span>normalmente, mas podemos ajustá-lo visualmente a partir desse ponto, usando as propriedades top, right, bottom e left para controlá-lo com base em sua posição inicial. </p>
         </section>
 
@@ -37,8 +38,10 @@
             <div class="box2"></div>
             <div class="preenchimento-top-bottom">
             </div>
-            <p>The element is removed from the <strong>normal document flow</strong>, and no space is created for the element in the page layout. The element is positioned relative to its closest positioned ancestor (if any) or to the initial containing block. Its final position is determined by the values of top, right, bottom, and left. <br>
+            <p>The element is removed from the <strong>normal document flow</strong>, 
+             <strong>O absolute usa o relative como referência. Quando você coloca um elemento absolute dentro de um elemento relative, o absolute vai se posicionar com base nesse relative.</strong> and no space is created for the element in the page layout. The element is positioned relative to its closest positioned ancestor (if any) or to the initial containing block. Its final position is determined by the values of top, right, bottom, and left. <br>
             This value creates a new stacking context when the value of z-index is not auto. The margins of absolutely positioned boxes do not collapse with other margins.</p>
+            <p>“Você pode sair da fila e ir para o canto superior direito da sua caixa-mãe?” E o elemento obedece. Ele vai direto pra onde você mandou, e ninguém mais se importa com ele.</p>
             <p>A propriedade position com valor absolute remove o elemento do <strong>fluxo normal da página</strong>, tornando-o sempre posicionado em relação a um elemento específico. Para definir esse ponto de referência, é necessário que o elemento ‘containing box’ (elemento pai) tenha uma posição definida, como position utilizado neste exemplo que é o: relative, pois isso não altera o fluxo dos demais elementos. Caso nenhum elemento de referência seja especificado, o posicionamento absolute será em relação ao bloco de conteúdo inicial da página (Initial Containing Block).</p>
         </section>
 

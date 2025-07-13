@@ -1,0 +1,398 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-family: "Montserrat", sans-serif;
+    --font-big: 800 2.3rem/135% var(--font-family);
+    --h1: 800 1.5rem/50% var(--font-family);
+    --paragraph: 400 1rem/160% var(--font-family);
+    --color-accents: #6B4F3B;
+    --color-primary-transparency: #6B4F3B80;
+    --color1: #C44536;
+    --color2: #d2aa32;
+    --color3: #E6D3B3;
+    --color-bg: #FFF8E7;
+    --color-font: rgb(0, 0, 0);
+    --color-font-secondary: rgba(255, 255, 255, 0.744);
+    --bg-transparency:linear-gradient(180deg,rgba(255, 248, 231, 0.14) 0%, rgba(255, 248, 231, 0.83) 66%, rgba(240, 221, 182, 0.87) 100%);
+
+}
+
+body{
+    font-family: var(--font-family);
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-bg);
+}
+
+/* -------------GLOBAL STYLES------------------- */
+.fixed-inline-padding{
+    padding-inline: 18px;
+}
+
+
+/* -------------------HEADER------------------ */
+header{
+    height: 75%;
+    /* border: 3px solid red; */
+    /* you must make sure your <header> itself has height and doesn’t collapse, or else the rest of the page might think it’s empty space and place the <aside> behind it. */
+}
+
+#header-menu{
+    background: linear-gradient(90deg,rgba(240, 209, 115, 0.325) 0%, rgba(210, 170, 50, 0.443) 50%, rgba(245, 161, 44, 0.427) 100%);
+    color: var(--color-font-secondary);
+    padding: 18px;
+}
+
+#header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+#header-menu nav ul{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+
+    li a{
+        text-decoration: none;
+        font: var(--paragraph);
+        color: var(--color-font);
+        color: var(--color-font-secondary);
+        font-weight: 500;
+
+    }
+    
+
+    li a:hover{
+        color: white;
+        font-weight: 500;
+        transition: color 0.2s ease-in-out;
+    }
+}
+
+header #bg{
+    background-image: url(images/bg-dough-bread-noise.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 75%;
+
+}
+
+#aside-menu{
+    /* border: 2px solid red; */
+    position: absolute;
+    bottom: 270px;
+    width: 100%;
+}
+
+
+#aside-menu ul{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+    justify-content: space-between;
+    bottom: 260px;
+    /* border: 2px solid greenyellow; */
+}
+/* Estilo base do texto com efeito */
+    .underline-animated {
+        text-decoration: none;  /* Remove o sublinhado padrão */
+        font: var(--font-big); /* Define a fonte grande */
+        color: var(--color-font-secondary);
+        text-shadow: 0px 0px 10px var(--color-accents);
+        position: relative;      /* Define que este elemento será a referência para o posicionamento do ::after */
+        display: inline-block;   /* Permite que o texto se comporte como bloco sem quebrar linha – necessário para posicionamento */
+        cursor: pointer;          /* Muda o cursor para "mãozinha" ao passar o mouse */
+        padding: 4px 0; /* Espaço acima e abaixo do texto (nenhum nas laterais) */
+    } 
+
+        /* Pseudoelemento que cria a linha animada */
+    .underline-animated::after {
+        content: '';/* Cria o pseudoelemento */
+        position: absolute;/* Posiciona ele de forma independente dentro do link */
+        width: 100%;/* Largura da linha igual à do texto */
+        height: 3px;/* Espessura da linha */
+        bottom: 0;/* Alinha a linha com a parte de baixo do texto */
+        left: 0;/* Começa no canto esquerdo */
+        background: linear-gradient(90deg,rgba(240, 209, 115, 1) 0%, rgba(210, 170, 50, 1) 50%, rgba(245, 161, 44, 1) 100%); /* Gradiente */
+        transform: scaleX(0);/* Começa invisível (sem largura horizontal) */
+        transform-origin: bottom right; /* A linha começa encolhida a partir do canto inferior direito */
+        transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1); /* Animação suave com curva personalizada */
+        border-radius: 3px;/* Arredonda as pontas da linha */
+    }
+
+    /* Quando o mouse passa por cima */
+    .underline-animated:hover::after {
+        transform: scaleX(1);/* Expande a linha para 100% da largura */
+        transform-origin: bottom left; /* Faz a linha crescer da esquerda para a direita */
+}
+
+/* ------------------MAIN------------------ */
+
+#about-us{
+    font: var(--paragraph);
+    text-align: justify;   
+    height: 15.4em;    
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    gap: .8rem;   
+    background-color: var(--color-bg);
+    color: var(--color-accents);
+
+    p strong{
+        font-weight: 800;
+        color: var(--color-accents);
+    }
+}
+
+/* -------------------products------------------ */
+
+#main-selection h2{
+    color: var(--color-accents);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#products{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px 200px;
+    /* border: 2px solid red; */
+    max-width: 100%;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* This works if the image is inside a grid cell with fixed height */
+        display: block;
+    }
+}
+
+#products img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.product1{
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: 2;
+    grid-row-end: 3;
+    position: relative;
+
+}
+
+.card1::before, .card2::before, .card3::before, .card4::before, .card5::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-transparency);
+    /* background: linear-gradient(180deg,rgba(240, 209, 115, 0.14) 0%, rgba(210, 170, 50, 0.67) 81%, rgba(245, 161, 44, 1) 100%); */
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+
+}
+
+.card1:hover::before{
+    opacity: 1;
+}
+/* 
+⚠️ Importante: a classe .card1 precisa estar aplicada em uma <div> que envolva a <img>.
+Isso porque o pseudoelemento ::before só funciona em elementos que podem conter outros — como <div>, <section>, <article> etc.
+Se você aplicar .card1 diretamente na <img>, o ::before **não vai aparecer**, já que imagens não suportam pseudoelementos.
+✔️ Solução: coloque a imagem dentro de uma <div class="card1"> e aplique o gradiente nela via ::before ou ::after.
+*/
+
+/* ---figcaption product1---- */
+.card1 figcaption{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* display flex necessário aqui para poder alinhar o texto no centro da imagem */
+    position: absolute;
+    z-index: 3;
+    bottom: 15px;
+    padding: 10px;
+    opacity: 0;
+    inset: 0;
+    /* padding-top: 300px; */
+    color: var(--color-accents);
+    line-height: 20px;
+    font-weight: 500;
+    text-align: center;
+    align-items: center;
+
+}
+
+.card1 figcaption:hover{
+    opacity: 1;
+}
+
+/* ------- */
+
+.product2{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-column-end: 4;
+    grid-row-end: 2;
+    position: relative;
+}
+
+.card2:hover::before{
+    opacity: 1;
+}
+/* ---figcaption product2---- */
+.card2 figcaption{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* display flex necessário aqui para poder alinhar o texto no centro da imagem */
+    position: absolute;
+    z-index: 3;
+    bottom: 15px;
+    padding: 10px;
+    opacity: 0;
+    inset: 0;
+    /* border: 2px solid sred */
+    color: var(--color-accents);
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+}
+
+.card2 figcaption:hover{
+    opacity: 1;
+}
+/* ---------- */
+
+.product3{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-column-end: 3;
+    grid-row-end: 3;
+    position: relative;
+}
+
+/* ---figcaption product3---- */
+.card3 figcaption{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* display flex necessário aqui para poder alinhar o texto no centro da imagem */
+    position: absolute;
+    z-index: 3;
+    bottom: 15px;
+    padding: 10px;
+    opacity: 0;
+    inset: 0;
+    /* border: 2px solid sred */
+    color: var(--color-accents);
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+}
+
+.card3 figcaption:hover{
+    opacity: 1;
+}
+/* ---------- */
+
+.card3:hover::before{
+    opacity: 1;
+}
+
+.product4{
+    grid-column-start: 3;
+    grid-row-start: 2;
+    grid-column-end: 4;
+    grid-row-end: 3;
+    position: relative;
+}
+
+/* ---figcaption product4---- */
+.card4 figcaption{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* display flex necessário aqui para poder alinhar o texto no centro da imagem */
+    position: absolute;
+    z-index: 3;
+    bottom: 15px;
+    padding: 10px;
+    opacity: 0;
+    inset: 0;
+    /* border: 2px solid sred */
+    color: var(--color-accents);
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+}
+
+.card4 figcaption:hover{
+    opacity: 1;
+}
+/* ---------- */
+
+.card4:hover::before{
+    opacity: 1;
+}
+.product5{
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-column-end: 4;
+    grid-row-end: 4;
+    object-position: 0px -110px ; /* object-position lets you control which part of the image is visible inside the box. */
+    object-fit: cover; /* Makes the image fill the box (like a background image). */
+    position: relative;
+}
+
+/* ---figcaption product5---- */
+.card5 figcaption{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* display flex necessário aqui para poder alinhar o texto no centro da imagem */
+    position: absolute;
+    z-index: 3;
+    bottom: 15px;
+    padding: 10px;
+    opacity: 0;
+    inset: 0;
+    /* border: 2px solid sred */
+    font-weight: 500;
+    color: var(--color-accents);
+    line-height: 20px;
+    text-align: center;
+}
+
+.card5 figcaption:hover{
+    opacity: 1;
+}
+/* ---------- */
+
+.card5:hover::before{
+    opacity: 1;
+}
