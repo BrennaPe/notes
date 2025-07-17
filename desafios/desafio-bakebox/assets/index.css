@@ -21,11 +21,18 @@
 
 }
 
+html{
+    scroll-behavior: smooth;
+    /* O valor smooth faz com que a rolagem aconteça de forma suave e animada, em vez de pular bruscamente para a seção. */
+
+}
+
 body{
     font-family: var(--font-family);
     width: 100vw;
     height: 100vh;
     background-color: var(--color-bg);
+
 }
 
 /* -------------GLOBAL STYLES------------------- */
@@ -74,6 +81,31 @@ header{
         font-weight: 500;
         transition: color 0.2s ease-in-out;
     }
+
+    /* ---------------DropDown menu--------- */
+    #drop-down{
+        position: relative;
+    }
+
+    #click-menu{
+        /* border: 2px solid red; */
+        display: block;
+        position: absolute;
+        top: 100%; /* abaixo do item pai */
+        display: none;
+    }
+
+
+    #drop-down:hover #click-menu{
+        display: block;
+    }
+
+    #click-menu a:hover{
+        font-size: 1.2em;
+        transition: .3s ease-in-out;
+        /* “Quando o mouse estiver sobre #drop-down, aplique os estilos ao elemento filho #click-menu que está dentro dele.” */
+    }
+
 }
 
 header #bg{
@@ -176,6 +208,7 @@ header #bg{
     grid-template-rows: 200px 200px 200px;
     /* border: 2px solid red; */
     max-width: 100%;
+    margin-top: 12px;
 
     img{
         width: 100%;
@@ -395,4 +428,89 @@ Se você aplicar .card1 diretamente na <img>, o ::before **não vai aparecer**, 
 
 .card5:hover::before{
     opacity: 1;
+}
+
+/* ----------FOOTER--------- */
+
+footer{
+    background-color: #6B4F3B;
+    color: var(--color-bg);
+
+}
+
+#info{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 24px;
+}
+
+.find-us{
+    /* border: 2px solid red; */
+    width: 260px;
+    text-align: center;
+}
+
+.hours{
+    border: 2px solid var(--color-bg);
+    display: flex;
+    gap: 24px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+#icons{
+    /* border: 2px solid #d2aa32; */
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding-bottom: 8px;
+}
+
+.socials{
+    /* border: 1px solid red; */
+    padding: 12px;
+    background-color: var(--color-bg);
+    border-radius: 20px;
+}
+
+#face{
+    background-image: url(images/facebook.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+
+}
+
+#tiktok{
+    background-image: url(images/tik-tok.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+#insta{
+    background-image: url(images/instagram.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+/* ------------arrow------------ */
+#arrow-up{
+    /* border: 2px solid red; */
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    padding: 8px;
+    background-image: url(images/arrow-up.png);
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--color-bg);
+    box-shadow: 0px 0px 8px var(--color-accents);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3;
+    cursor: pointer;
 }

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/index.css">
 </head>
 <body>
-    <header>
+    <header id="topo">
         <div id="header-menu" class="fixed-inline-padding">
             <div id="header-content">
                 <div id="logo">
@@ -19,7 +19,18 @@
                 <nav>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Order Online</a></li>
+                        <li id="drop-down">
+                            <a href="#">
+                                Order Online
+                             <a>
+                            <ul id="click-menu">
+                                <li><a href="#">Cakes</a></li>
+                                <li><a href="#">Sweetss</a></li>
+                                <li><a href="#">Savory</a></li>
+                                <li><a href="#">Sandwiches</a></li>
+                                <li><a href="#">Breads</a></li>
+                            </ul>    
+                        </li>
                         <li><a href="#">Galery</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -85,8 +96,31 @@
                 </figure>
             </div>
             </div>
+    
     </main>
-
-
+    <footer>
+        <div id="info">
+            <div class="find-us">
+                <h2>Find us</h2>
+                <p>21 Abbeygate St Lower <br> Galway city, Ireland <br>
+                087 944-8816 <br>
+                bakeboxtogo.order@gmail.com
+                </p>
+            </div>
+            <div class="hours">
+                <h2>We are open</h2>
+                <p>
+                    Mon to Fri: 7AM - 5PM <br>
+                    Sat to Sun: 7AM - 6PM
+                </p>
+            </div>
+        </div>
+        <div id="icons">
+            <a href="https://www.facebook.com/BakeBox2023" class="socials" id="face" target="_blank"></a>
+            <a href="https://www.tiktok.com/@my_bakebox" class="socials" id="tiktok" target="_blank"></a>
+            <a href="https://www.instagram.com/my_bakebox/?hl=en" class="socials" id="insta" target="_blank"></a>
+        </div>
+    </footer>
+    <a href="#topo" id="arrow-up"></a>
 </body>
 </html>
