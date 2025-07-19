@@ -17,12 +17,12 @@
                     <h1>BakeBox</h1>
                 </div>
                 <nav>
-                    <ul id="list">
-                        <li><a href="#">Home</a></li>
-                        <li id="drop-down">
+                    <ul id="menu-principal">
+                        <li class="hideOnMobile"><a href="#">Home</a></li>
+                        <li class="hideOnMobile" id="drop-down">
                             <a href="#">
                                 Order Online
-                             <a>
+                            </a>
                             <ul id="click-menu">
                                 <li><a href="#">Cakes</a></li>
                                 <li><a href="#">Sweetss</a></li>
@@ -31,12 +31,20 @@
                                 <li><a href="#">Breads</a></li>
                             </ul>    
                         </li>
+                        <li class="hideOnMobile"><a href="#">Galery</a></li>
+                        <li class="hideOnMobile"><a href="#">Contact</a></li>
+                        <li onclick="showMenu()" id="menu-sanduiche"> <img src="assets/images/menu-sanduiche.svg" alt="" ></li>
+                    </ul>
+
+                    <ul id="menu-side-phone">
+                         <li id="menu-sanduiche" onclick="hideMenu()"> <img src="assets/images/close.svg" alt=""></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Order Online</a></li>
                         <li><a href="#">Galery</a></li>
                         <li><a href="#">Contact</a></li>
-                        <li id="menu-sanduiche"> <img src="assets/images/menu-sanduiche.svg" alt=""></li>
-
                     </ul>
                 </nav>
+
             </div>
         </div>
         <div id="bg">
@@ -124,5 +132,18 @@
         </div>
     </footer>
     <a href="#topo" id="arrow-up"></a>
+
+    <script>
+
+        function showMenu(){
+            var showSideMenu = document.getElementById('menu-side-phone')
+            showSideMenu.style.display = ('flex')
+        }
+
+        function hideMenu(){
+           var hideSideMenu = document.getElementById('menu-side-phone')
+           hideSideMenu.style.display = ('none')
+        }
+    </script>
 </body>
 </html>
