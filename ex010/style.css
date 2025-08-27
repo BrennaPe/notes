@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5em;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* On large screens, the grid will create as many columns as possible (each at least 200px wide). On small screens, if the viewport is too narrow, it will collapse to 1 column (because of minmax(200px, 1fr)).*/
+    padding: 3em;
+    gap: 2em;
+}
+
+.quote{
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.203);
+
+}
+
+.quote p{
+    margin-bottom: 8px;
+}
+
+.quote span{
+    font-weight: bold;
+}
+
+@media screen and (min-width: 600px){
+    .span-2{
+        grid-column: auto / span 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /* this media queries Apply the CSS only if the screen width is at least 600px (like tablets or bigger screens). And targets elements with the class .span-2. drid-column: auto / span 2; means:
+    Start where you normally would (auto), but occupy 2 columns instead of 1. And auto means let the grid decide where to start, then span 2 = take 2 columns. if insted of auto we put (1) Start at grid line 1 (the very first column in the grid)*/
+} 
+
