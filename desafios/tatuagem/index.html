@@ -9,7 +9,25 @@
 <body>
     <div id="container-bg">
     </div>
-    <img src="natalia.png" alt="" style="display: none;">
-    <a href="opcoes" id="btn">Click to know</a>
+
+    <div id="container-lvl1">
+        <div id="container-pai-btn">
+            <a href="opcoes" id="btn" onmouseenter="imagem()" onmouseleave="HideImagem()">Click to know</a>
+            <img src="nat-old.png" id="nat-old" alt="nat-old">
+        </div>
+    </div>
 </body>
+
+<script>
+    function imagem (){
+        let img = document.getElementById("nat-old");
+        img.style.display = 'flex';
+    }
+
+    function HideImagem (){
+        let hideIt = document.getElementById('nat-old')
+        hideIt.style.display = 'none'
+    }
+    
+</script>
 </html>
