@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>O que é DOM?</h1>
+    <p>O DOM é como uma “ponte” entre o HTML e o JavaScript, permitindo que o JS entenda e altere a estrutura da página.. DOM significa Document Object Model (Modelo de Objeto do Documento) basicamente é um conjunto de objetos dentro do seu navegador que vai dar acesso aos componentes internos do seu website.
+    É uma representação do HTML (ou XML) como um objeto em árvore, que o navegador cria para que o JavaScript possa interagir com a página.</p>
+    <p>Tudo do javscript esta dentro de um objeto chamado window. Dentro o window nós temos varios outros objetos como location que diz qual é a localização do seu site, qual é a url, qual é a pagina atual e qual foi a pagina anterior. O document que é o documento atual e history que vai guardando de onde você veio  e pra onde você vai...</p>
+    <p>Dentro do <span>document</span> existe um objeto muito importante chamado <span>html</span> e dentro do html nós temos o <span>head</span> e o <span>body</span> e etc.</p>
+    <p>Representação da arvore dom conforme descrito acima</p>
+    <details>
+        <summary> Imagem arvore DOM</summary>
+    <img src="arvore-dom.png" alt="">
+    </details>
+    <p>
+        O DOM (Document Object Model) é uma árvore que representa toda a estrutura do HTML da sua página.
+        Cada elemento do HTML (como &lt;div&gt;, &lt;p&gt;, &lt;h1&gt;, etc.) é um nó dentro dessa árvore. <br>
+        Saber navegar e se localizar nessa árvore é essencial, porque você pode acessar, modificar ou remover qualquer elemento da página usando JavaScript.
+    </p>
+
+    <h2>
+        Como navegar e selecionar elementos no DOM?
+    </h2>
+    <p>
+        Existem várias formas de selecionar elementos para manipular. Alguns métodos mais usados são:
+        <ul>
+            <li>
+                <a href="tag-marca.html">Por Tag (Marca)</a> → document.getElementsByTagName('p') <br> Aqui você consegue selecionar mais de um elemento, porque podem existir vários com a mesma tag (por exemplo, várias tags &lt;p&gt; no HTML). Esse método retorna uma coleção (HTMLCollection), então, para acessar um item específico, você precisa usar um índice, como [0]
+            </li>
+            <li>
+                <a href="tag-id.html">Por ID</a> → document.getElementById('meuID') <br> Essa forma seleciona um único elemento, pois IDs devem ser únicos na página. Você não precisa de colchetes porque o retorno é apenas um elemento.
+            </li>
+            <li>
+                <a href="tag-name.html">Por Nome</a> → document.getElementsByName('meuNome') <br>
+                Muito usado em formulários, esse método seleciona elementos pelo atributo name. Ele retorna uma coleção, então você também precisa percorrê-la para acessar os elementos.
+            </li>
+            <li>
+                Por Classe → document.getElementsByClassName('minhaClasse') <br>
+                Seleciona todos os elementos que possuem a classe especificada. Retorna uma coleção (HTMLCollection), então, para alterar todos, você deve usar um loop ou forEach() (com querySelectorAll).
+            </li>
+            <li>
+                Por Seletor CSS → document.querySelector('.classe') ou document.querySelectorAll('.classe') <strong> ESTE É O MAIS RECOMENDADO</strong><br>
+                Essa é a forma mais moderna e flexível, pois permite usar qualquer seletor CSS (classe, ID, tag, combinadores, etc.). querySelector retorna o primeiro elemento que corresponde ao seletor, enquanto querySelectorAll retorna todos os elementos correspondentes em uma NodeList, que pode ser percorrida com forEach().
+            </li>
+        </ul>
+    </p>
+</body>
+</html>
