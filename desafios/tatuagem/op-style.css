@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+#container{
+    display: grid;
+    padding: 24px;
+    gap: 12px 20px;
+    height: 100vh;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    max-width: 900px;
+    margin: auto;
+
+}
+
+/* The outer box that holds the card */
+.box{
+    width: 220px;              /* card width */
+    height: 350px;             /* card height */
+    perspective: 1000px;       /* gives a 3D perspective to the flip */
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;         /* so front/back can be positioned inside it */
+    transform-style: preserve-3d; /* keep child elements in 3D space */
+    transition: transform .6s;   /* smooth animation when rotating */
+    border-radius: 20px;   
+}
+
+.card-front, .card-back, .card-back2, .card-back3, .card-back4, .card-back5, .card-back6 {
+    position: absolute;          /* stack them exactly on top of each other */
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* hide the "mirror" side when rotated */
+    border-radius: 20px;         /* rounded corners for a nicer look */
+}
+
+.card-front {
+    background-image: url(bg.jpg); /* put your front image here */
+    background-size: cover;        /* cover the whole card */
+    background-position: center;
+}
+
+.card-back {
+    background-image: url(images/flash1.png); /* tattoo image here */
+    background-size: cover;
+    transform: rotateY(180deg);   /* rotate 180 so it starts hidden behind */
+    background-position: center;
+}
+
+.box:hover .card-inner {
+    transform: rotateY(180deg);   /* rotate the whole card to show the back */
+    box-shadow: 
+    0px 0px 5px rgb(251, 167, 167),
+    0px 0px 15px rgb(247, 109, 109),
+    0px 0px 25px rgb(246, 58, 58),
+    0px 0px 35px rgb(253, 1, 1);
+}
+
+.box:hover #shadow2{
+    box-shadow: 
+    0px 0px 5px rgb(158, 237, 157),
+    0px 0px 15px rgb(85, 246, 82),
+    0px 0px 25px rgb(54, 242, 51),
+    0px 0px 35px rgb(5, 249, 1);
+}
+.box:hover #shadow3{
+    box-shadow: 
+    0px 0px 5px rgb(237, 237, 157),
+    0px 0px 15px rgb(243, 243, 102),
+    0px 0px 25px rgb(237, 237, 63),
+    0px 0px 35px rgb(255, 255, 0);
+}
+.box:hover #shadow4{
+    box-shadow: 
+    0px 0px 5px rgb(234, 157, 237),
+    0px 0px 15px rgb(231, 104, 236),
+    0px 0px 25px rgb(240, 44, 247),
+    0px 0px 35px rgb(244, 0, 252);
+}
+.box:hover #shadow5{
+    box-shadow: 
+    0px 0px 5px rgb(157, 225, 237),
+    0px 0px 15px rgb(107, 221, 241),
+    0px 0px 25px rgb(73, 213, 238),
+    0px 0px 35px rgb(1, 215, 253);
+}
+.box:hover #shadow6{
+    box-shadow: 
+    0px 0px 5px rgb(237, 204, 157),
+    0px 0px 15px rgb(250, 192, 110),
+    0px 0px 25px rgb(240, 158, 43),
+    0px 0px 35px rgb(255, 149, 0);
+}
+
+
+/* ---------card2---------*/
+
+.card-back2 {
+    background-image: url(images/flash2.png); /* tattoo image here */
+    background-size: cover;
+    transform: rotateY(180deg);   /* rotate 180 so it starts hidden behind */
+    background-position: center 20px;
+}
+/* ---------card3---------*/
+
+.card-back3 {
+    background-image: url(images/flash3.png); /* tattoo image here */
+    background-size: cover;
+    transform: rotateY(180deg);   /* rotate 180 so it starts hidden behind */
+    background-position: center;
+}
+/* ---------card4---------*/
+
+.card-back4 {
+    background-image: url(images/flash4.png); /* tattoo image here */
+    background-size: cover;
+    transform: rotateY(180deg);   /* rotate 180 so it starts hidden behind */
+    background-position: center;
+}
+/* ---------card5---------*/
+
+.card-back5 {
+    background-image: url(images/flash5.png); /* tattoo image here */
+    background-size: cover;
+    transform: rotateY(180deg);   /* rotate 180 so it starts hidden behind */
+    background-position: center;
+}
+/* ---------card6---------*/
+
+.card-back6 {
+    background-image: url(images/flash6.png); /* tattoo image here */
+    background-size: cover;
+    transform: rotateY(180deg);   /* rotate 180 so it starts hidden behind */
+    background-position: center;
+}
+
+#home img{
+    /* border: 2px solid white; */
+    height: 200px;
+
+}
+
+#home{
+    position: absolute;
+    bottom: 0%;
+    right: 10%;
+}
