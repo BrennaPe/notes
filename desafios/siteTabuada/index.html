@@ -12,19 +12,31 @@
         <div id="container-gerador">
             <label for="numero">Número</label>
             <input type="number" name="numero" id="numero">
-            <button onclick="calcular()">Gerar Tabuada</button>
+            <button onclick="GerarTabuada()">Gerar Tabuada</button>
             <div>
-                <p id="resultado">Resultado...</p>
+                <select name="Tabuada" id="seltab" size="10"></select>
             </div>
         </div>
     </div>
 
     <script>
-        function calcular(){
-            let input = document.getElementById('numero').value
-            let result = document.getElementById('resultado')
-           
-        
+        function GerarTabuada(){
+            let input = document.getElementById('numero')
+            let tabu = document.getElementById('seltab')
+
+            if (input.value.length == 0){
+                window.alert('- ERROR - Por favor digite um número')
+            } else {
+                let num = Number(input.value)
+                let x = 1
+                tabu.innerHTML = "" // Clear previous results
+                while (x <= 10){
+                    let item = document.createElement('option')
+                    item.text = `${num} x ${x} = ${num*x}`
+                    tabu.appendChild(item) //Without appendChild, the option exists in memory but is never displayed on the page.
+                    x++ //Increases x by 1, so the loop moves to the next multiplication.
+                }
+            }
         }
     </script>
 </body>
