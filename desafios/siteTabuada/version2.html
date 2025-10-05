@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="version2-style.css">
+</head>
+<body>
+    <div id="container">
+        <div>
+            <label for="valor">Digite um valor</label>
+            <input type="number" name="valor" id="valor" minlength="1">
+            <button type="submit" onclick="GerarTab()">Gerar tab</button>
+        </div>
+
+        <select name="tabuada" id="tabResult" size="10" >
+        </select>
+    </div>
+</body>
+
+<script>
+    function GerarTab(){
+        let input = document.getElementById('valor')
+
+        let inputNumber = Number(input.value)
+
+        let tabuadaResult = document.getElementById('tabResult')
+
+        tabuadaResult.innerHTML = ''
+
+        if (input.value.length === 0){
+            window.alert('Por valor, digite um valor!')
+        }
+        let y = 1
+        while (y <= 10){
+            let item = document.createElement('option')
+            item.text = `${inputNumber} x ${y} = ${inputNumber * y}`
+            tabuadaResult.appendChild(item)
+            y++
+        }
+    }
+</script>
+</html>
