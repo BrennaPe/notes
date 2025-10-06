@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-family: "Inter", sans-serif;
+    --title: 500 2rem var(--font-family);
+    --txt-sm-bold: 800 1rem var(--font-family);
+    --txt-sm: normal 1rem var(--font-family);
+    --color-card: #232323;
+    --color-bg: #181818;
+    --color-bg2:#2f2f2f;
+    --color1:#bbd449;
+    --color2:#efefef;
+
+}
+
+body{
+    /*Using 100vw and 100vh can cause scroll issues due to scrollbars. Better: */
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+}
+
+main{
+    background-color: var(--color-card);
+    width: 24rem;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+main figure{
+    height: 7em;
+    width: 7rem;
+    border-radius: 100px;
+    margin: auto;
+    background-image: url(assets/avatar-jessica.jpeg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 2.5rem;
+}
+
+section h1{
+    font: var(--title);
+    color: var(--color2);
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+section .adress{
+    font: var(--txt-sm-bold);
+    color: var(--color1);
+    margin: 0rem 0rem 2rem 0rem;
+    text-align: center;
+}
+
+section .bio{
+    font: var(--txt-sm);
+    color: var(--color2);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+ul li{
+    list-style: none;
+
+}
+
+ul li a{
+    text-decoration: none;
+    font: var(--txt-sm-bold);
+    color: var(--color2);
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg2);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    text-align: center;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  
+}
+
+ul li a:hover{
+    background-color: var(--color1);
+    color: var(--color-card);
+}
