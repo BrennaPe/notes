@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Sales Report</h1>
+        <div id="container-calculator">
+
+            <div id="input1">
+                <label for="previous">Previous Sale</label>
+                <input type="number" name="previous" id="previous" minlength="1">
+            </div>
+
+            <div id="input2">
+                <label for="current">Current Sale</label>
+                <input type="number" name="current" id="current">
+            </div>
+
+            <button type="submit" onclick="calcular()">Result</button>
+        </div>
+        <div id="resultado"></div>
+    </div>    
+
+    <script>
+        function calcular(){
+            let PreviousSale = document.getElementById('previous')
+            let PSN = Number(PreviousSale.value)
+            let CurrentSale = document.getElementById('current')
+            let CSN = Number(CurrentSale.value)
+            let result = document.getElementById('resultado')
+            let calculo = (CSN - PSN) / PSN * 100
+            
+            if (calculo >= 0){
+                result.innerHTML = `Parabéns! As suas vendas cresceram ${calculo}%`
+            }
+            if (calculo < 0){
+                result.innerHTML = `Infelizmente as suas vendas diminuiram! estamos falando em ${calculo}%`
+            }
+        }
+    </script>
+</body>
+</html>
