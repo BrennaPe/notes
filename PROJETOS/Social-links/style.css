@@ -84,7 +84,8 @@ ul li a{
     border-radius: .5rem;
     text-align: center;
     transition: background-color .2s ease-in-out, color .2s ease-in-out;
-  
+    /*transition: <propriedade> <duração> <função-tempo> <atraso>; Isso deixa claro que somente background-color e color terão animação de transição. */
+    /*transition: .2s ease-in-out; → anima tudo que mudar. Assim, se no futuro você mudar, por exemplo, o border-radius no hover, ele mudará instantaneamente, sem animação — só as cores farão o fade suave. */
 }
 
 ul li a:hover{
