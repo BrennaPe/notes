@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color1:#111111;
+    --color2:#6B6B6B;
+    --color3:#ffffff;
+    --color-bg:#F4D04E;
+    --font-family: "Figtree", sans-serif;
+    --fontH1: 800 24px/150% var(--font-family);
+    --fontTXT: normal 16px/150% var(--font-family);
+    --fontSmall:normal 14px/150% var(--font-family);
+    --fontSmallBold:700 14px/150% var(--font-family);
+}
+
+body{
+    /*Using 100vw and 100vh can cause scroll issues due to scrollbars. Better: */
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-color: var(--color3);
+    border-radius: 1.5rem;
+    width: 24rem;
+    padding: 24px;
+    border: 1px solid black;
+    box-shadow: 10px 10px black;
+}
+
+main figure:nth-child(1){
+    margin-bottom: 24px;
+}
+
+section a{
+    font: var(--fontSmallBold);
+    padding: 4px 12px;
+    background-color: var(--color-bg);
+    color: var(--color1);
+    text-decoration: none;
+    border-radius: 0.25rem;
+    transition: .2s color ease-in-out;
+}
+
+section a:hover{
+    background-color: var(--color1);
+    color: var(--color-bg);
+}
+
+section p:nth-child(2){
+    color: var(--color1);
+    font: var(--fontSmall);
+    padding-top: 12px;
+}
+
+section h1{
+    font: var(--fontH1);
+    color: var(--color1);
+    padding: 12px 0px;
+    transition: .2s color;
+}
+
+section h1:hover{
+    color: var(--color-bg);
+}
+
+section p:nth-child(4){
+    color: var(--color2);
+    font: var(--fontTXT);
+    padding: 0px 0px 12px 0px;
+}
+
+figure:last-child{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+figcaption{
+    color: var(--color1);
+    font: var(--fontSmallBold);
+}
