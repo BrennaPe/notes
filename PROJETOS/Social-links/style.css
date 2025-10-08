@@ -91,4 +91,6 @@ ul li a{
 ul li a:hover{
     background-color: var(--color1);
     color: var(--color-card);
+    
 }
+
