@@ -205,3 +205,23 @@
   border-bottom: none; /* remove borda da última linha */
 } 
 
+/* -------------media queries----------- */
+
+@media screen and (max-width: 600px) {
+
+  .content-box{
+    margin: 0px;
+    border-radius:0px;
+    margin-top: 0px;
+    padding: 0px;
+  }
+
+  figure img{
+    border-radius: 0px;
+  }
+
+  .padding-mobile{
+    padding: 0px 24px 24px 24px;
+  }
+
+}
