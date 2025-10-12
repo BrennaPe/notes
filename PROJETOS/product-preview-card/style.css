@@ -11,4 +11,135 @@
     --white:#FFFFFF;
     --green:#3D8168;
     --dark-green:#1A4032;
+    --font-family-title: "Fraunces", serif;
+    --font-family-regular: "Montserrat", sans-serif;
+
+    --font-att1: bold 32px/100% var(--font-family-title);
+
+    --font-reg-bold-2: bold 14px/110% var(--font-family-regular);
+
+    --font-reg3: medium 14px/160% var(--font-family-regular);
+
+    --font-reg4: medium 12px/120% var(--font-family-regular);
+
+    --font-reg5: medium 13px/120% var(--font-family-regular);
+}
+
+body{
+    background-color: var(--cream);
+    min-width: 100vw;
+    min-height: 100vh;
+    font-family: var(--font-family-regular);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    max-width: 37.5rem;
+    display: flex;
+    background-color: var(--white);
+    border-radius: .5rem;
+    overflow: hidden;/* this is importante because it hide the corners (overflow) of my image. without it the image would not have the same border radius */
+}
+
+main figure img{
+    width: 18.75rem;
+    height: 100%;
+}
+
+.content{
+    padding:2rem ;
+}
+
+/* =================TITLE=============== */
+
+.p-title{
+    color: var(--grey);
+    font: var(--font-reg4);
+    letter-spacing: 5px;
+}
+
+.title h1{
+    color: var(--black);
+    font: var(--font-att1);
+    margin: 24px 0px;
+}
+
+.p-text-title{
+    color: var(--grey);
+    font: var(--font-reg3);
+    margin-bottom: 32px;
+}
+
+/* =================PRICE=============== */
+
+.price{
+    display: flex;
+    gap: 16px ;
+    align-items: center;
+}
+
+.actual-price{
+    color: #3D8168;
+    font: var(--font-att1);
+}
+
+.old-price{
+    color: var(--grey);
+    font: var(--font-reg5);
+    text-decoration: line-through;
+}
+
+/* =================BUTTON=============== */
+
+.button a{
+    background-color: var(--green);
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+    border-radius: 8px;
+    color: var(--white);
+    font: var(--font-reg-bold-2);
+    gap: 8px;
+    text-decoration: none;
+}
+
+.button a:hover{
+    background-color: var(--dark-green);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/* =================MEDIA QUERIES MOBILE=============== */
+
+@media screen and (max-width: 750px) {
+    main{
+        display: block;
+        max-width: 22rem;
+    }
+
+main figure {
+    width: 100%;/* figure ocupa toda a largura do container */
+    height: 21rem;/* altura fixa para definir a "janela" da imagem */
+    overflow: hidden;/* corta qualquer parte da imagem que saia da caixa (importante para border-radius) */
+    border-radius: 8px 8px 0px 0px;/* cantos arredondados (se quiser) */
+}
+
+main figure img {
+    display: block;/* remove gap inline (baseline) */
+    width: 100%;/* preenche a largura da caixa figure */
+    height: 100%;/* preenche a altura da caixa figure */
+    object-fit: cover;/* escala preservando proporção e cobre a caixa (pode cortar) */
+    object-position: 50% 20%;/* define o ponto focal: 50% horiz, 20% vert (move o enquadramento pra baixo) */
+}
 }
