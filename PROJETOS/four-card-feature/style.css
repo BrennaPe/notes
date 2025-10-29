@@ -50,7 +50,7 @@ header p{
     color: var(--grey);
     font: var(--txt-present-4);
     margin-bottom: 4.625rem;
-    width: 540px;
+    max-width: 540px;
     text-align: center;
 }
 

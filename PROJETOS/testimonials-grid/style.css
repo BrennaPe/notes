@@ -1,0 +1,198 @@
+/* ===============mobile first================ */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --black:#121212;
+    --dark-blue:#19202D;
+    --white:#FFFFFF;
+    --Grey100:#E7EAEE;
+    --Grey200:#CFCFCF;
+    --Grey400:#676D7E;
+    --Grey500:#48556A;
+    --purple50:#EDE4FF;
+    --purple300:#A775F1;
+    --purple500:#733FC8;
+    --font-family: "Barlow Condensed", sans-serif;
+    --text-present-1: 600 20px/120% var(--font-family);
+    --text-present-2: 500 13px/110% var(--font-family);
+    --text-present-3: 500 13px/140% var(--font-family);
+    --text-present-4: 500 11px/110% var(--font-family);
+}
+
+body{
+    background-color: var(--Grey100);
+}
+/* =================utility=================== */
+
+.grey500{
+    color: var(--Grey500);
+}
+
+.grey400{
+    color: var(--Grey400);
+}
+
+.grey200{
+    color: var(--Grey200);
+}
+
+.grey100{
+    color: var(--Grey100);
+}
+
+.purple50{
+    color: var(--purple50);
+}
+
+/* =============Card common designe============*/
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* border: 5px solid red; */
+    height: 100%;
+}
+
+main{
+    /* border: 2px solid red; */
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    gap: 2rem;
+    width: 305px;
+    padding: 2rem 0rem;
+}
+
+.card{
+    /* min-width: 21.875rem; */
+    width: 100%;
+    padding: 2rem;
+    border-radius: 8px;
+    color: var(--white);
+}
+
+figure{
+    display: flex;
+    gap: 17px;
+    align-items: center;
+}
+
+figure img{
+    border-radius: 50px;
+}
+
+.card .main-comment{
+    font: var(--text-present-1);
+    margin: 16px 0px;
+} 
+
+.card .name{
+    font: var(--text-present-2);
+    padding-bottom: 4px;
+}
+
+.card .verified{
+    font: var(--text-present-4);
+}
+
+.card .comment{
+    font: var(--text-present-3);
+}
+
+/* =============Cards===========*/
+
+.card1{
+    background-color: var(--purple500);
+}
+
+.card2{
+    background-color: var(--Grey500);
+}
+
+.card3{
+    background-color: var(--white);
+}
+
+.card4{
+    background-color: var(--dark-blue);
+}
+
+.card5{
+    background-color: var(--white);
+}
+
+/* =================Tablets==============*/
+
+@media screen and (min-width:768px) {
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        width: 647px;
+        padding: 2rem 0rem;
+
+    }
+
+    .card1{
+        grid-row: 1/2;
+        grid-column: 1/3;
+    }
+    .card4{
+        grid-row: 3/4;
+        grid-column: 1/3;
+    }
+    .card5{
+        grid-row: 4/5;
+        grid-column: 1/3;
+    }
+}
+
+/* ================DESKTOP=============*/
+@media screen and (min-width: 1100px) {
+        body{
+            /* border: 2px solid red; */
+            height: 100vh;
+        }
+
+        main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        width: 1114px;
+        padding: 2rem 0rem;
+        margin: 0px 4rem;
+
+    }
+
+    .card1{
+        grid-row: 1/2;
+        grid-column: 1/3;
+    }
+
+    .card2{
+        grid-row: 1/2;
+        grid-column: 3/4;
+    }
+
+    .card3{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .card4{
+        grid-row: 2/3;
+        grid-column: 2/4;
+    }
+
+    .card5{
+        grid-row: 1/3;
+        grid-column: 4/5;
+    }
+}
