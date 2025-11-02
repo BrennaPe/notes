@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cyan-600:#4D96A9;
+    --cyan-300:#8FE3F9;
+    --purple-600:#855FB1;
+    --purple-300:#D9B8FF;
+    --slate-900:#28283D;
+    --slate-600:#87879D;
+    --slate-300:#D1D1DF;
+    --white:#FAFAFA;
+    --font-family: "Red Hat Display", sans-serif;
+    --text-font-1: bold 64px/110% var(--font-family);
+    --text-font-2:bold 40px/110% var(--font-family);
+    --text-font-3:bold 16px/110% var(--font-family);
+    --text-font-4: normal 18px/110% var(--font-family);
+    --text-font-5: bold 16px/150% var(--font-family);
+}
