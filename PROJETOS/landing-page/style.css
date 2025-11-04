@@ -15,8 +15,152 @@
     --white:#FAFAFA;
     --font-family: "Red Hat Display", sans-serif;
     --text-font-1: bold 64px/110% var(--font-family);
-    --text-font-2:bold 40px/110% var(--font-family);
+    --text-font-2:900 40px/110% var(--font-family);
     --text-font-3:bold 16px/110% var(--font-family);
-    --text-font-4: normal 18px/110% var(--font-family);
-    --text-font-5: bold 16px/150% var(--font-family);
+    --text-font-4: 400 19px/110% var(--font-family);
+    --text-font-5: 900 16px/150% var(--font-family);
 }
+
+/* ================HEADER============== */
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: var(--font-family);
+}
+
+header{
+    /* border: 1px solid red; */
+    padding-top: 48px;
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 68px; */
+}
+
+/* ================****MAIN****=============== */
+
+
+/* ========Hero Section======== */
+
+main .hero-image{
+    /* border: 1px solid red; */
+    height: 19rem;
+    background-image: url(assets/tablet/image-hero.png);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+main .hero-text h1{
+    font: var(--text-font-2);
+    color: var(--slate-900);
+    text-align: center;
+    padding: 0rem 2rem;
+}
+
+main .hero-text p{
+    font: var(--text-font-4);
+    color: var(--slate-600);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    line-height: 1.8rem;
+}
+
+.buttons{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.button-download{
+    width: 12rem;
+    height: 3.5rem;
+    border-radius: 2rem;
+    background-color: var(--cyan-600);
+    font: var(--text-font-5);
+    border: none;
+}
+
+.button-download a{
+    color: var(--white);
+    text-decoration: none;
+
+    span{
+        color: var(--cyan-300);
+    }
+}
+
+.button-download:hover{
+    background-color: #71C0D4;
+}
+
+.button-info{
+    width: 10rem;
+    height: 3.5rem;
+    border-radius: 3rem;
+    background-color: var(--purple-600);
+    font: var(--text-font-5);
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.button-info a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+button-info:hover{
+    background-color: #B18BDD;
+}
+
+.number-1{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 64px;
+}
+
+.main-content{
+    /* border: 2px solid red; */
+    padding: 32px;
+}
+
+.images-main-content{
+    background-image: url(assets/mobile/image-collage-mobile.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 99%;
+    /* border: 1px solid blue; */
+    height: 22rem;
+    width: 100%;
+}
+
+.p1-main-content{
+    font: var(--text-font-3);
+    color: var(--cyan-600);
+    letter-spacing: 4px;
+    margin-top: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+    /* border: 1px solid red; */
+}
+
+.text-main-content h2{
+    font: var(--text-font-2);
+    color: var(--slate-900);
+    text-align: center;
+    /* border: 1px solid red; */
+    padding-top: 16px;
+}
+
+.p2-main-content{
+    font: var(--text-font-4);
+    color: var(--slate-600);
+    text-align: center;
+    margin-top: 2rem;
+    line-height: 1.8rem;
+
+}
+
