@@ -43,11 +43,14 @@ header{
 
 main .hero-image{
     /* border: 1px solid red; */
-    height: 19rem;
+    height: 12rem;
+    margin: 62px 0px;
     background-image: url(assets/tablet/image-hero.png);
-    background-size: 120%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    /* border: 1px solid red; */
+
 }
 
 main .hero-text h1{
@@ -55,6 +58,9 @@ main .hero-text h1{
     color: var(--slate-900);
     text-align: center;
     padding: 0rem 2rem;
+    /* border: 1px solid red; */
+    max-width: 350px;
+    margin: auto;
 }
 
 main .hero-text p{
@@ -128,13 +134,37 @@ button-info:hover{
 }
 
 .images-main-content{
-    background-image: url(assets/mobile/image-collage-mobile.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 99%;
-    /* border: 1px solid blue; */
-    height: 22rem;
-    width: 100%;
+    min-height: 19rem;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.images-main-content .image1{
+   background-image: url(assets/desktop/image-woman-in-videocall.jpg);
+   background-size: cover; 
+   border-radius: 8px;
+
+}
+.images-main-content .image2{
+   background-image: url(assets/desktop/image-women-videochatting.jpg);
+   background-size: cover; 
+   border-radius: 8px;
+
+}
+.images-main-content .image3{
+   background-image: url(assets/desktop/image-men-in-meeting.jpg);
+   background-size: cover; 
+   border-radius: 8px;
+
+
+}
+.images-main-content .image4{
+   background-image: url(assets/desktop/image-man-texting.jpg); 
+   background-size: cover; 
+   border-radius: 8px;
+
 }
 
 .p1-main-content{
@@ -216,5 +246,74 @@ button-info:hover{
 .footer-content button a{
     color: var(--white);
     text-decoration: none;
+
+}
+
+/* ==========media queries TABLET============ */
+
+@media screen and (min-width: 768px) {
+
+    main .hero-image{
+        /* border: 1px solid red; */
+        height: 19rem;
+        background-image: url(assets/tablet/image-hero.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+}
+
+    main .hero-text h1{
+        font: var(--text-font-2);
+        color: var(--slate-900);
+        text-align: center;
+        padding: 0rem 2rem;
+        /* border: 1px solid red; */
+        margin: auto;
+    }
+
+    main .hero-text p{
+        font: var(--text-font-4);
+        color: var(--slate-600);
+        text-align: center;
+        padding: 1.5rem 2rem;
+        line-height: 1.8rem;
+        /* border: 1px solid red; */
+        max-width: 550px;
+        margin: auto;
+    }
+
+    .buttons{
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+}
+    .button-info{
+        margin-bottom: 0rem;
+    }
+
+    .images-main-content{
+        min-height: 10rem;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+}
+    .text-main-content h2{
+    max-width: 450px;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+
+.p2-main-content{
+    max-width: 550px;
+    margin: auto;
+    /* border: 1px solid red; */
+    padding-top: 32px;
+
+
+}
 
 }
