@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Article preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="card">
+            <div class="img-container"></div>
+
+            <section class="txt-container">
+                <h1>
+                    Shift the overall look and feel by adding these wonderful touches to furniture in your home
+                </h1>
+                <p class="txt">
+                    Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.
+                </p>
+                    <div class="footer">
+                        <figure>
+                            <img src="assets/avatar-michelle.jpg" alt="Imagem de perfil michelle appleton">
+                            <figcaption>
+                                <p class="nome">Michelle Appleton</p>
+                                <p class="data">28 Jun 2020</p>
+                            </figcaption>
+                        </figure>
+                            <div class="arrow" onmouseover="shareSocials()" onclick="hideShareSocials()" id="socialMedia"></div>
+                            <div class="shareBox" id="shareBox">
+                                <p>SHARE</p>
+                                <div class="icons">
+                                    <a href="#">
+                                        <img src="assets/icon-facebook.svg" alt="#" class="iconFacebook">
+                                    </a>
+                                    <a href="#">
+                                        <img src="assets/icon-twitter.svg" alt="" class="iconTwitter">
+                                    </a>
+                                    <a href="#">
+                                        <img src="assets/icon-pinterest.svg" alt="" class="iconPinterest">
+                                    </a>
+                                </div>
+                            </div>
+
+                    </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        function shareSocials(){
+            let boxSocialMedia = document.getElementById('shareBox')
+            boxSocialMedia.style.display = ('flex')
+        }
+
+        function hideShareSocials(){
+            let boxSocialMedia = document.getElementById('shareBox')
+            boxSocialMedia.style.display = ('none')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Vendas</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    label, input, select { display: block; margin-bottom: 8px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    td, th { border: 1px solid #ccc; padding: 6px; }
+  </style>
+</head>
+<body>
+  <h2>Registro de Vendas</h2>
+  <label>Produto: <input id="produto"></label>
+  <label>Quantidade: <input id="quantidade" type="number" min="1"></label>
+  <label>Funcionário: <input id="funcionario"></label>
+  <button onclick="registrar()">Registrar</button>
+
+  <table id="tabela">
+    <tr><th>Data</th><th>Hora</th><th>Produto</th><th>Qtd</th><th>Funcionário</th></tr>
+  </table>
+
+  <script>
+    function registrar() {
+      const produto = document.getElementById('produto').value;
+      const qtd = document.getElementById('quantidade').value;
+      const func = document.getElementById('funcionario').value;
+      const data = new Date();
+      const linha = `<tr>
+        <td>${data.toLocaleDateString()}</td>
+        <td>${data.toLocaleTimeString()}</td>
+        <td>${produto}</td>
+        <td>${qtd}</td>
+        <td>${func}</td>
+      </tr>`;
+      document.getElementById('tabela').insertAdjacentHTML('beforeend', linha);
+      localStorage.setItem(data.getTime(), JSON.stringify({produto, qtd, func, data}));
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white:#FFFFFF;
+    --Grey900:#48556A;
+    --Grey500:#6E8098;
+    --Grey400:#9DAEC2;
+    --Grey200:#ECF2F8;
+    --font-family: "Manrope", sans-serif;
+    --Text-preset-1:700 20px/130% var(--font-family); 
+    --Text-preset-2:500 13px/140% var(--font-family); 
+    --Text-preset-3:900 13px/140% var(--font-family); 
+    --Text-preset-4:400 13px/140% var(--font-family); 
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: var(--font-family);
+}
+
+main{
+    background-color: var(--Grey200);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    border-radius: 10px;
+    width: fit-content;
+    background-color: var(--white);
+}
+
+main .img-container{
+    /* border: 1px solid red; */
+    width: 17.5rem;
+    height: 18rem;
+    background-image: url(assets/drawers.jpg);
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 10px 0px 0px 10px;
+}
+
+
+main .txt-container{
+    padding: 2rem 2.5rem;
+    /* border: 1px solid red; */
+    width: 445px;
+
+}
+
+main .txt-container h1{
+    font: var(--Text-preset-1);
+    letter-spacing: .25%;
+    color: var(--Grey900);
+    padding-bottom: 1.5rem;
+}
+main .txt-container .txt{
+    font: var(--Text-preset-2);
+    letter-spacing: .25px;
+    color: var(--Grey500);
+    letter-spacing: .12%;
+    padding-bottom: 1.5rem;
+}
+
+/* =============FOOTER=============== */
+
+div.footer{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+figure{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid red; */
+}
+
+figure img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 16px;
+
+}
+
+figcaption .nome{
+    /* border: 1px solid red; */
+    font: var(--Text-preset-3);
+    color: var(--Grey900);
+}
+
+figcaption .data{
+    /* border: 1px solid red; */
+    font: var(--Text-preset-2);
+    color: var(--Grey400);
+}
+
+.arrow{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--Grey200);
+    background-image: url(assets/icon-share.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* border: 2px solid red; */
+}
+
+.arrow:hover{
+    border: 2px solid var(--Grey500);
+}
+
+.shareBox{
+    width: 248px;
+    height: 50px;
+    background-color: var(--Grey900);
+    border-radius: 10px;
+    position: absolute;
+    left: 60%;
+    bottom: 120%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px;
+    display: none;
+}
+
+.shareBox p{
+    font: var(--Text-preset-2);
+    color: var(--Grey400);
+    letter-spacing: 5px;
+}
+
+.icons{
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 12px;
+    
+    /* justify-content: center; */
+}
+
+.icons a{
+    text-decoration: none;
+    /* border: 1px solid red; */
+}
+
+.shareBox img{
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+/* =============MEDIA QUERIES TABLET========= */
+
+@media screen and (max-width:850px) {
+    .card{
+    /* border: 1px solid red; */
+    width: 600px;
+}
+    main .img-container{
+    /* border: 1px solid red; */
+    width: 17.5rem;
+    min-height: 21rem;
+}
+}
+
+@media screen and (max-width:482px) {
+    .card{
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid red;
+    width: 327px;
+    background-color: var(--white);
+}
+}
