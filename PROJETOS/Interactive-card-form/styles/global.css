@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+/* ==============Colors============*/
+    --white:#FFFFFF;
+    --black:#000000;
+    --grey950:#2F2F2F;
+    --grey400: #adb5be;
+    --grey200: #DFDEE0;
+    --purple950:#21092F;
+    --purple500:#D53AFF;
+    --orange400:#FF834A;
+    --blue400:#47A2FF;
+    --red400:#FF5050;
+    --gradient1: linear-gradient(0deg,rgba(210, 211, 217, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    --gradient2:linear-gradient(0deg,rgba(97, 5, 149, 1) 0%, rgba(99, 72, 254, 1) 100%);
+
+/* ===========Typography============ */
+    --font-family: "Space Grotesk", sans-serif;
+    --txt1:600 28px/130% var(--font-family);
+    --txt2:600 18px/130% var(--font-family);
+        /* only difference beetwen txt2 and txt3 is letter spacing */
+    --txt4:600 14px/130% var(--font-family);
+    --txt5:600 12px/125% var(--font-family);
+        /* only difference beetwen txt5 and txt6 is letter spacing */
+    --txt7:600 9px/125% var(--font-family);
+
+
+/* ===============Spacing========== */
+    --spacing0:0rem;
+    --spacing100:.5rem;
+    --spacing200:1rem;
+    --spacing300:1.5rem;
+    --spacing400:2rem;
+    --spacing500:2.5rem;
+    --spacing600:3rem;
+    --spacing800:4rem;
+
+
+}
