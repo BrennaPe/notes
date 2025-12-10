@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miles to Kilometers</title>
+</head>
+<body>
+    <main>
+        <h1>miles to kilometers</h1>
+        <form>
+            <label for="kilometers">Km</label>
+            <input type="number" id="km">
+
+            <button type="button" onclick="converter()">CONVERTER</button>
+
+            <p id="miles"></p>
+        </form>
+    </main>
+
+    <script>
+        function converter(){
+            let kilometers = document.getElementById('km');
+            let kms = Number(kilometers.value);
+
+            let miles = document.getElementById('miles');
+
+            miles.innerHTML = `O valor de ${kms}km em miles é ${(kms) * 1.60934}`
+        }
+    </script>
+</body>
+</html>

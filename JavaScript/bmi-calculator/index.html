@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <label for="height">Height</label>
+        <input type="number" placeholder="inches" id="altura">
+
+        <label for="weight">Weight</label>
+        <input type="number" placeholder="pounds" id="peso">
+
+        <button type="button" onclick="calcular()"> Calcular bmi</button>
+
+        <p id="result"></p>
+    </main>
+</body>
+
+<script>
+    function calcular(){
+        let height = document.getElementById('altura');
+        let heightn = Number(height.value);
+        let calcMetros = heightn * 0.254
+
+
+        let weight = document.getElementById('peso')
+        let weightn = Number(weight.value);
+        let calcKgs = weightn / 2.2046
+
+        let resultado = document.getElementById('result')
+
+
+
+       resultado.innerHTML=`Seu BMI é de ${calcKgs/calcMetros} uma vez que temos ${calcMetros}metros de altura e ${calcKgs} Quilos`
+
+    }
+</script>
+
+</html>
